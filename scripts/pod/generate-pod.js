@@ -30,14 +30,29 @@ const PRINT_DIR = path.join(REPO, 'pod-designs', 'print');       // gitignored, 
 const POD_LOG = path.join(REPO, 'pod-products-log.jsonl');
 
 // Product lineup. blueprintTitle must match the Printify catalog title.
-// darkColors variants get the "light" design (white text); lightColors variants get
-// the "dark" design (charcoal text) — so text always contrasts with the garment.
+// mode "contrast": fabric shows through — dark-color variants get the light
+//   (white-text transparent) design, light-color variants get the dark design.
+// mode "solid": full-surface print — one design on a brand-navy background.
+// badge: sticker-style rounded rect so the kiss-cut follows a clean shape.
+// sizes: array = exact size names; regex = match against the size option.
 const PRODUCTS = [
-  { key: 'tee', label: 'Premium Tee', blueprintTitle: 'Unisex Garment-Dyed T-shirt', darkColors: /black|pepper|navy|ink|graphite/i, lightColors: /white|ivory|ash/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2199 },
-  { key: 'crewneck', label: 'Crewneck Sweatshirt', blueprintTitle: 'Unisex Heavy Blend™ Crewneck Sweatshirt', darkColors: /black|navy|charcoal|dark chocolate/i, lightColors: /^white$|ash|sand|sport grey/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2999 },
-  { key: 'hoodie', label: 'Hoodie', blueprintTitle: 'Unisex Heavy Blend™ Hooded Sweatshirt', darkColors: /black|navy|charcoal|dark chocolate/i, lightColors: /^white$|ash|sand|sport grey/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 3699 },
-  { key: 'mug', label: 'Mug 11oz', blueprintTitle: 'Mug 11oz', darkColors: null, lightColors: /.*/, sizes: null, price: 1599 },  // white-only blueprint, variants carry no color option
+  { key: 'tee', label: 'Premium Tee', blueprintTitle: 'Unisex Garment-Dyed T-shirt', mode: 'contrast', darkColors: /black|pepper|navy|ink|graphite/i, lightColors: /white|ivory|ash/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2199 },
+  { key: 'crewneck', label: 'Crewneck Sweatshirt', blueprintTitle: 'Unisex Heavy Blend™ Crewneck Sweatshirt', mode: 'contrast', darkColors: /black|navy|charcoal|dark chocolate/i, lightColors: /^white$|ash|sand|sport grey/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2999 },
+  { key: 'hoodie', label: 'Hoodie', blueprintTitle: 'Unisex Heavy Blend™ Hooded Sweatshirt', mode: 'contrast', darkColors: /black|navy|charcoal|dark chocolate/i, lightColors: /^white$|ash|sand|sport grey/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 3699 },
+  { key: 'mug', label: 'Mug 11oz', blueprintTitle: 'Mug 11oz', mode: 'contrast', darkColors: null, lightColors: /.*/, sizes: null, price: 1599 },  // white-only blueprint, variants carry no color option
+  { key: 'tote', label: 'Tote Bag', blueprintTitle: 'Tote Bag', mode: 'contrast', darkColors: /black|navy/i, lightColors: /natural|white|oyster|light/i, sizes: null, price: 2199 },
+  // Full-surface products — design on solid brand navy:
+  { key: 'poster', label: 'Poster 18x24', blueprintTitle: 'Matte Vertical Posters', mode: 'solid', sizes: /18.{0,3}x.{0,3}24/i, price: 2499 },
+  { key: 'canvas', label: 'Canvas 16x20', blueprintTitle: 'Matte Canvas, Stretched, 1.25"', mode: 'solid', sizes: /16.{0,3}x.{0,3}20/i, price: 4999 },
+  { key: 'journal', label: 'Hardcover Journal', blueprintTitle: 'Hardcover Journal Matte', mode: 'solid', sizes: null, price: 1999 },
+  { key: 'stickers', label: 'Kiss-Cut Stickers', blueprintTitle: 'Kiss-Cut Stickers', mode: 'solid', badge: true, sizes: /3.{0,3}x.{0,3}3/i, price: 399 },
+  { key: 'tumbler', label: 'Tumbler 20oz', blueprintTitle: 'Stainless Steel Tumbler 20oz', mode: 'solid', sizes: null, price: 2999 },
+  { key: 'pillow', label: 'Throw Pillow 18x18', blueprintTitle: 'Spun Polyester Square Pillow', mode: 'solid', sizes: /18.{0,3}x.{0,3}18/i, price: 2499 },
+  { key: 'blanket', label: 'Plush Blanket 50x60', blueprintTitle: 'Velveteen Plush Blanket', mode: 'solid', sizes: /50.{0,3}x.{0,3}60/i, price: 4499 },
+  { key: 'deskmat', label: 'Desk Mat', blueprintTitle: 'Desk Mat', mode: 'solid', sizes: null, price: 2199 },
+  { key: 'phonecase', label: 'Phone Case', blueprintTitle: 'Tough Phone Cases', mode: 'solid', sizes: null, price: 2199 },
 ];
+const NAVY_BG = '#101820';
 const PREFERRED_PROVIDERS = ['Monster Digital', 'SwiftPOD', 'Print Geek', 'MyLocker', 'District Photo'];
 
 function arg(flag, fallback) {
@@ -187,20 +202,35 @@ async function resolveProducts() {
     const provider = PREFERRED_PROVIDERS.map(n => providers.find(pr => pr.title === n)).find(Boolean) || providers[0];
     const variants = await printify('GET', `/v1/catalog/blueprints/${bp.id}/print_providers/${provider.id}/variants.json`);
     const list = variants.variants || variants;
-    const sizeOk = v => !p.sizes || p.sizes.includes(v.options?.size);
-    const darkVariantIds = list.filter(v => sizeOk(v) && p.darkColors && p.darkColors.test(v.options?.color || '')).slice(0, 30).map(v => v.id);
-    const lightVariantIds = list.filter(v => sizeOk(v) && p.lightColors && p.lightColors.test(v.options?.color || '')).slice(0, 30).map(v => v.id);
-    if (!darkVariantIds.length && !lightVariantIds.length) {
-      const colors = [...new Set(list.map(v => v.options?.color))].slice(0, 20);
-      throw new Error(`No variants matched for "${bp.title}". Available colors: ${JSON.stringify(colors)}`);
+    const sizeOk = v => {
+      if (!p.sizes) return true;
+      const size = v.options?.size || '';
+      return Array.isArray(p.sizes) ? p.sizes.includes(size) : p.sizes.test(size);
+    };
+    let darkVariants = [], lightVariants = [];
+    if (p.mode === 'contrast') {
+      darkVariants = list.filter(v => sizeOk(v) && p.darkColors && p.darkColors.test(v.options?.color || '')).slice(0, 30);
+      lightVariants = list.filter(v => sizeOk(v) && p.lightColors && p.lightColors.test(v.options?.color || '')).slice(0, 30);
+    } else {
+      lightVariants = list.filter(sizeOk).slice(0, 30);   // solid mode: one design, all matched variants
     }
+    const sample = darkVariants[0] || lightVariants[0];
+    if (!sample) {
+      const colors = [...new Set(list.map(v => v.options?.color))].slice(0, 20);
+      const sizes = [...new Set(list.map(v => v.options?.size))].slice(0, 20);
+      throw new Error(`No variants matched for "${bp.title}". Colors: ${JSON.stringify(colors)} Sizes: ${JSON.stringify(sizes)}`);
+    }
+    // Print placeholder for this product (pixel dimensions of the print area).
+    const ph = (sample.placeholders || []).find(x => x.position === 'front') || (sample.placeholders || [])[0] || {};
     resolved.push({
-      key: p.key, label: p.label, price: p.price,
+      key: p.key, label: p.label, price: p.price, mode: p.mode, badge: !!p.badge,
       blueprintId: bp.id, blueprintTitle: bp.title,
       providerId: provider.id, providerTitle: provider.title,
-      darkVariantIds, lightVariantIds,
+      position: ph.position || 'front', printW: ph.width || null, printH: ph.height || null,
+      darkVariantIds: darkVariants.map(v => v.id),
+      lightVariantIds: lightVariants.map(v => v.id),
     });
-    console.log(`  ${p.key}: "${bp.title}" (bp ${bp.id}) via ${provider.title} (${provider.id}), ${darkVariantIds.length} dark + ${lightVariantIds.length} light variants`);
+    console.log(`  ${p.key}: "${bp.title}" (bp ${bp.id}) via ${provider.title} (${provider.id}), ${darkVariants.length} dark + ${lightVariants.length} light variants, print ${ph.width}x${ph.height}@${ph.position}`);
   }
   fs.writeFileSync(RESOLVED_FILE, JSON.stringify(resolved, null, 2) + '\n', 'utf8');
   return resolved;
@@ -219,33 +249,68 @@ function productDescription(design) {
   return `"${quote}" — an original Thrive Richly design for people quietly building wealth: simple money habits, no hype, no get-rich-quick.\n\nPrinted on demand. Check the size chart before ordering.`;
 }
 
-// Renders + uploads print files and creates one DRAFT product per PRODUCTS type.
-// Draft products are visible only in the Printify dashboard, never to customers.
-async function createDraftProducts(design, shop, products) {
-  const files = {};
-  for (const theme of ['light', 'dark']) {
-    const file = path.join(PRINT_DIR, `${design.slug}-${theme}.png`);
-    await renderPrintFile(design, theme, file);
-    files[theme] = await uploadPng(file);
-    console.log(`  uploaded ${theme} print file (image id ${files[theme]})`);
+// Renders + uploads the print file a product needs, sized to its print placeholder.
+// Cache avoids re-uploading identical renders across products sharing dimensions.
+async function renderAndUpload(design, theme, p, cache) {
+  const w = p.printW || 4500, h = p.printH || 5400;
+  const solid = p.mode === 'solid';
+  const key = `${theme}@${w}x${h}${solid ? '+solid' : ''}${p.badge ? '+badge' : ''}`;
+  if (!cache[key]) {
+    const file = path.join(PRINT_DIR, `${design.slug}-${key.replace(/[^a-z0-9]+/gi, '-')}.png`);
+    await renderPrintFile(design, theme, file, {
+      width: w, height: h,
+      background: solid ? NAVY_BG : null,
+      badge: p.badge,
+    });
+    cache[key] = await uploadPng(file);
+    console.log(`  uploaded ${key} (image id ${cache[key]})`);
   }
-  design.products = [];
-  for (const p of products) {
-    const title = `${design.quote_lines.join(' ')} · ${p.label}`;
+  return cache[key];
+}
+
+// Builds the variants + print_areas payload pieces for one product config.
+async function buildProductPayload(design, p, cache) {
+  const printAreas = [];
+  let variantIds = [];
+  if (p.mode === 'solid') {
+    const img = await renderAndUpload(design, 'light', p, cache);
+    variantIds = p.lightVariantIds;
+    printAreas.push({ variant_ids: variantIds, placeholders: [{ position: p.position, images: [{ id: img, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
+  } else {
     // Contrast rule: dark garments carry the light (white-text) design, light
     // garments carry the dark (charcoal-text) design.
-    const darkIds = p.darkVariantIds || p.variantIds || [];
-    const lightIds = p.lightVariantIds || [];
-    const printAreas = [];
-    if (darkIds.length) printAreas.push({ variant_ids: darkIds, placeholders: [{ position: 'front', images: [{ id: files.light, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
-    if (lightIds.length) printAreas.push({ variant_ids: lightIds, placeholders: [{ position: 'front', images: [{ id: files.dark, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
+    if (p.darkVariantIds.length) {
+      const img = await renderAndUpload(design, 'light', p, cache);
+      printAreas.push({ variant_ids: p.darkVariantIds, placeholders: [{ position: p.position, images: [{ id: img, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
+    }
+    if (p.lightVariantIds.length) {
+      const img = await renderAndUpload(design, 'dark', p, cache);
+      printAreas.push({ variant_ids: p.lightVariantIds, placeholders: [{ position: p.position, images: [{ id: img, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
+    }
+    variantIds = [...p.darkVariantIds, ...p.lightVariantIds];
+  }
+  return {
+    variants: variantIds.map(id => ({ id, price: p.price, is_enabled: true })),
+    print_areas: printAreas,
+  };
+}
+
+// Creates one DRAFT product per PRODUCTS type. Draft products are visible only
+// in the Printify dashboard, never to customers.
+async function createDraftProducts(design, shop, products) {
+  const cache = {};
+  design.products = design.products || [];
+  for (const p of products) {
+    if (design.products.some(existing => existing.key === p.key)) continue;   // already created
+    const title = `${design.quote_lines.join(' ')} · ${p.label}`;
+    const payload = await buildProductPayload(design, p, cache);
     const created = await printify('POST', `/v1/shops/${shop.id}/products.json`, {
       title,
       description: productDescription(design),
       blueprint_id: p.blueprintId,
       print_provider_id: p.providerId,
-      variants: [...darkIds, ...lightIds].map(id => ({ id, price: p.price, is_enabled: true })),
-      print_areas: printAreas,
+      variants: payload.variants,
+      print_areas: payload.print_areas,
       tags: ['personal finance', 'money', 'motivation', 'wealth', 'saving', 'investing'],
     });
     const full = await printify('GET', `/v1/shops/${shop.id}/products/${created.id}.json`);
@@ -343,7 +408,8 @@ async function runPublish() {
 }
 
 // Re-applies variants + print areas to already-published products (e.g. after a
-// color-mapping change). Contrast rule is enforced product-wide.
+// color-mapping change) AND creates + publishes any product types added to
+// PRODUCTS since the design first shipped.
 async function runRefresh() {
   const queue = loadQueue();
   const live = queue.designs.filter(d => d.status === 'published' && d.products && d.products.length);
@@ -354,33 +420,53 @@ async function runRefresh() {
   fs.mkdirSync(PRINT_DIR, { recursive: true });
   for (const design of live) {
     console.log(`\n--- refreshing ${design.slug} ---`);
-    const files = {};
-    for (const theme of ['light', 'dark']) {
-      const file = path.join(PRINT_DIR, `${design.slug}-${theme}.png`);
-      await renderPrintFile(design, theme, file);
-      files[theme] = await uploadPng(file);
-    }
+    const cache = {};
+    // 1) Update products that already exist.
     for (const prod of design.products) {
       const p = byKey[prod.key];
       if (!p) { console.log(`  ${prod.key}: no config, skipped`); continue; }
-      const printAreas = [];
-      if (p.darkVariantIds.length) printAreas.push({ variant_ids: p.darkVariantIds, placeholders: [{ position: 'front', images: [{ id: files.light, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
-      if (p.lightVariantIds.length) printAreas.push({ variant_ids: p.lightVariantIds, placeholders: [{ position: 'front', images: [{ id: files.dark, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
       try {
-        await printify('PUT', `/v1/shops/${shop.id}/products/${prod.productId}.json`, {
-          variants: [...p.darkVariantIds, ...p.lightVariantIds].map(id => ({ id, price: p.price, is_enabled: true })),
-          print_areas: printAreas,
-        });
+        const payload = await buildProductPayload(design, p, cache);
+        await printify('PUT', `/v1/shops/${shop.id}/products/${prod.productId}.json`, payload);
         await printify('POST', `/v1/shops/${shop.id}/products/${prod.productId}/publish.json`, {
           title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
         });
         appendPodLog({ timestamp: new Date().toISOString(), slug: design.slug, product: prod.key, productId: prod.productId, status: 'refreshed' });
-        console.log(`  ${prod.key}: refreshed (${p.darkVariantIds.length} dark + ${p.lightVariantIds.length} light variants)`);
+        console.log(`  ${prod.key}: refreshed`);
       } catch (err) {
         console.error(`  ${prod.key}: refresh FAILED — ${err.message}`);
       }
       await sleep(1500);
     }
+    // 2) Create + publish product types this design doesn't have yet.
+    const missing = products.filter(p => !design.products.some(prod => prod.key === p.key));
+    for (const p of missing) {
+      const title = `${design.quote_lines.join(' ')} · ${p.label}`;
+      try {
+        const payload = await buildProductPayload(design, p, cache);
+        const created = await printify('POST', `/v1/shops/${shop.id}/products.json`, {
+          title,
+          description: productDescription(design),
+          blueprint_id: p.blueprintId,
+          print_provider_id: p.providerId,
+          variants: payload.variants,
+          print_areas: payload.print_areas,
+          tags: ['personal finance', 'money', 'motivation', 'wealth', 'saving', 'investing'],
+        });
+        await printify('POST', `/v1/shops/${shop.id}/products/${created.id}/publish.json`, {
+          title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
+        });
+        const full = await printify('GET', `/v1/shops/${shop.id}/products/${created.id}.json`);
+        const mockup = (full.images || []).find(i => i.is_default) || (full.images || [])[0];
+        design.products.push({ key: p.key, title, productId: created.id, mockupUrl: mockup ? mockup.src : null });
+        appendPodLog({ timestamp: new Date().toISOString(), slug: design.slug, product: p.key, title, productId: created.id, price: p.price, mockupUrl: mockup ? mockup.src : null, status: 'published' });
+        console.log(`  ${p.key}: NEW product published (${created.id})`);
+      } catch (err) {
+        console.error(`  ${p.key}: create FAILED — ${err.message}`);
+      }
+      await sleep(1500);
+    }
+    saveQueue(queue);
   }
   console.log('\nRefresh complete.');
 }

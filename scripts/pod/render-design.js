@@ -21,16 +21,21 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function designSvg(design, themeKey, { background = null, width = PRINT_W, height = PRINT_H } = {}) {
+function designSvg(design, themeKey, { background = null, width = PRINT_W, height = PRINT_H, badge = false } = {}) {
   const theme = THEMES[themeKey];
   const lines = design.quote_lines.map(l => l.toUpperCase());
   const subline = (design.subline || '').trim();
 
   // Fit the longest line inside ~87% of the canvas width. Heavy sans glyphs
   // average ~0.62em wide; this is an estimate, so lines are capped at 22 chars
-  // by the drafting schema to keep the estimate safe.
+  // by the drafting schema to keep the estimate safe. Also clamp to canvas
+  // height so wide/landscape print areas (blankets, desk mats) don't overflow.
   const maxLen = Math.max(...lines.map(l => l.length), 1);
-  const fontSize = Math.min(Math.round(width * 0.125), Math.floor((width * 0.87) / (maxLen * 0.62)));
+  const fontSize = Math.min(
+    Math.round(width * 0.125),
+    Math.floor((width * 0.87) / (maxLen * 0.62)),
+    Math.floor((height * 0.55) / (lines.length * 1.24)),
+  );
   const lineGap = Math.round(fontSize * 1.24);
   const dividerGap = Math.round(fontSize * 0.9);
   const subSize = Math.round(fontSize * 0.34);
@@ -40,6 +45,15 @@ function designSvg(design, themeKey, { background = null, width = PRINT_W, heigh
 
   const parts = [];
   if (background) parts.push(`<rect width="${width}" height="${height}" fill="${background}"/>`);
+  if (badge) {
+    // Kiss-cut sticker badge: navy rounded rect + gold border, so the cut line
+    // follows a clean shape instead of hugging individual letters.
+    const bw = Math.round(width * 0.92), bh = Math.round(height * 0.92);
+    const bx = Math.round((width - bw) / 2), by = Math.round((height - bh) / 2);
+    const rx = Math.round(width * 0.08);
+    parts.push(`<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="${rx}" fill="#101820"/>`);
+    parts.push(`<rect x="${bx + Math.round(width * 0.015)}" y="${by + Math.round(width * 0.015)}" width="${bw - Math.round(width * 0.03)}" height="${bh - Math.round(width * 0.03)}" rx="${Math.round(rx * 0.8)}" fill="none" stroke="${THEMES.light.accent}" stroke-width="${Math.max(4, Math.round(width * 0.008))}"/>`);
+  }
   for (const line of lines) {
     parts.push(
       `<text x="${width / 2}" y="${y}" text-anchor="middle" font-family="Liberation Sans, DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="${fontSize}" letter-spacing="${Math.round(fontSize * 0.02)}" fill="${theme.text}">${esc(line)}</text>`,
@@ -58,9 +72,10 @@ function designSvg(design, themeKey, { background = null, width = PRINT_W, heigh
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">${parts.join('')}</svg>`;
 }
 
-// Full-size transparent print file (4500x5400 PNG).
-async function renderPrintFile(design, themeKey, outPath) {
-  const svg = designSvg(design, themeKey);
+// Full-size print file. Default 4500x5400 transparent; opts can set width/height
+// (matched to the product's print placeholder), a solid background, or badge mode.
+async function renderPrintFile(design, themeKey, outPath, opts = {}) {
+  const svg = designSvg(design, themeKey, opts);
   await sharp(Buffer.from(svg)).png().toFile(outPath);
   return outPath;
 }
