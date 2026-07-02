@@ -114,7 +114,13 @@ async function claudeDraftDesigns(count) {
       system: `You write original typography designs for Thrive Richly merch (shirts, hoodies, mugs). Follow this brand voice document, especially its Red lines:\n\n${brandVoice}`,
       messages: [{
         role: 'user',
-        content: `Write exactly ${count} merch designs. Rules: every line is YOUR original phrasing — never a quote by a famous person, never an attribution. Identity statements people want to WEAR (calm confidence about money habits), not advice sentences. No income claims, no dollar amounts, no emoji, no hashtags in quote_lines. quote_lines: 1-3 lines, max 22 characters per line, punchy. subline: optional tiny accent (e.g. "THRIVE RICHLY" or a 2-4 word echo), or "". Avoid these existing designs: ${JSON.stringify(existing)}`,
+        content: `Write exactly ${count} merch designs. What SELLS in text merch (in priority order — mix the batch across these):
+1. INSIDER HUMOR for the boring-investing tribe — inside jokes only index-fund/FIRE people get. The wearer signals "I'm one of us" with a smirk.
+2. MONEY PUNS & WORDPLAY — genuinely clever puns sell year after year. Must land on first read.
+3. ANTI-HUSTLE SARCASM — dry humor puncturing get-rich-quick culture ("my portfolio is boring and so am I" energy).
+4. GIFTABLE WHOLESOME — something you'd gift a spouse/dad/friend who's good with money.
+NEVER: earnest aspirational statements (they read as trying and do not sell), advice sentences, motivational-poster energy.
+Rules: every line is YOUR original phrasing — never a quote by a famous person, never an attribution. Funny beats profound. No income claims, no specific dollar amounts, no emoji, no hashtags in quote_lines. quote_lines: 1-3 lines, max 22 characters per line, punchy. subline: optional tiny accent (e.g. "THRIVE RICHLY" or a dry 2-4 word punchline), or "". Avoid these existing designs: ${JSON.stringify(existing)}`,
       }],
     }),
   });
@@ -296,22 +302,31 @@ async function runPublish() {
     console.log(`\n--- ${design.slug} ---`);
     try {
       if (!design.products || !design.products.length) await createDraftProducts(design, shop, products);
+      let published = 0;
       for (const prod of design.products) {
-        await printify('POST', `/v1/shops/${shop.id}/products/${prod.productId}/publish.json`, {
-          title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
-        });
-        appendPodLog({
-          timestamp: new Date().toISOString(),
-          slug: design.slug,
-          product: prod.key,
-          title: prod.title,
-          productId: prod.productId,
-          mockupUrl: prod.mockupUrl,
-          status: 'published',
-        });
-        console.log(`  ${prod.key}: published (product ${prod.productId})`);
+        // A product deleted from the dashboard must not sink the whole design.
+        try {
+          await printify('POST', `/v1/shops/${shop.id}/products/${prod.productId}/publish.json`, {
+            title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
+          });
+          published++;
+          appendPodLog({
+            timestamp: new Date().toISOString(),
+            slug: design.slug,
+            product: prod.key,
+            title: prod.title,
+            productId: prod.productId,
+            mockupUrl: prod.mockupUrl,
+            status: 'published',
+          });
+          console.log(`  ${prod.key}: published (product ${prod.productId})`);
+        } catch (err) {
+          prod.publishError = String(err.message || err);
+          console.error(`  ${prod.key}: publish FAILED (skipping) — ${prod.publishError}`);
+        }
         await sleep(1500);
       }
+      if (published === 0) throw new Error('No products could be published for this design.');
       design.status = 'published';
       design.publishedAt = new Date().toISOString();
     } catch (err) {
