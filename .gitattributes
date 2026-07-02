@@ -1,1 +1,2 @@
 published-log.jsonl merge=union
+pod-products-log.jsonl merge=union

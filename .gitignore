@@ -13,3 +13,8 @@ remotion-burst/node_modules/
 remotion-burst/public/assets/
 remotion-burst/out/
 remotion-burst/props-*.json
+
+# POD build artifacts (full-size print files are regenerated at publish time)
+scripts/pod/node_modules/
+scripts/pod/package-lock.json
+pod-designs/print/

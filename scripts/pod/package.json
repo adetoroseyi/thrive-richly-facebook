@@ -1,0 +1,8 @@
+{
+  "name": "thrive-pod",
+  "private": true,
+  "description": "POD design rendering deps (sharp) for the Printify pipeline",
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

@@ -26,3 +26,11 @@ On-demand batches of fresh Reels: Claude drafts scripts at run time (so content 
 **Invoke:** Actions tab → "Burst Reels" → Run workflow. `mode: draft` prints the scripts and captions without rendering or publishing (review first); `mode: publish` runs the full pipeline. Locally: `node scripts/burst/generate-burst.js --mode draft --count 5`.
 
 **Secrets required:** `ANTHROPIC_API_KEY`, `PEXELS_API_KEY` (free at pexels.com/api), `GOOGLE_TTS_API_KEY`, `BLOTATO_API_KEY`. Scheduled posts are logged to `published-log.jsonl` with `status: "scheduled"`; Blotato publishes them at their slot times even with everything switched off.
+
+## POD Products — print-on-demand (Printify Pop-Up Store)
+
+Original typography merch, fully automated: Claude drafts short original lines (never famous quotes, never attributions), code renders print-ready PNGs (4500x5400, deterministic — approved preview = printed pixels), and the Printify API creates + publishes products (premium tee, crewneck, hoodie, mug) to the Pop-Up Store.
+
+**Flow:** Actions tab → "POD Products (Printify)" → `mode: draft` commits preview PNGs to `pod-designs/previews/` and queue entries (`approved: false`) to `scripts/pod/design-queue.json`. A human reviews the previews and sets `approved: true` on the keepers. Then `mode: publish` publishes only approved drafts and records product ids + mockup URLs in `pod-products-log.jsonl`. Catalog choices (blueprint/provider/variants) are resolved once and cached in `scripts/pod/resolved-products.json`; prices live in `PRODUCTS` in `scripts/pod/generate-pod.js`.
+
+**Secrets required:** `ANTHROPIC_API_KEY` (draft), `PRINTIFY_API_TOKEN` (publish).

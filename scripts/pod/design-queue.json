@@ -1,0 +1,4 @@
+{
+  "description": "POD design queue. Filled by generate-pod.js mode=draft; published by mode=publish. A design publishes only when approved=true (human decision) and status=draft. Never edit published entries.",
+  "designs": []
+}
