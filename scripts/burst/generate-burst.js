@@ -284,10 +284,20 @@ async function downloadFile(url, dest) {
   fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
 }
 
+// A promo reel features at most this many designs (one scene each + CTA).
+const PROMO_MAX_DESIGNS = 4;
+
 async function runPromo() {
   const podQueue = JSON.parse(fs.readFileSync(POD_QUEUE, 'utf8'));
-  const designs = podQueue.designs.filter(d => d.status === 'published' && d.products && d.products.length);
-  if (!designs.length) throw new Error('No published POD designs to promote — run the POD pipeline first.');
+  const published = podQueue.designs.filter(d => d.status === 'published' && d.products && d.products.length);
+  if (!published.length) throw new Error('No published POD designs to promote — run the POD pipeline first.');
+  // Selection: designs flagged "featured": true win; otherwise the newest published.
+  // Either way, never more than PROMO_MAX_DESIGNS per reel.
+  const flagged = published.filter(d => d.featured === true);
+  const designs = (flagged.length ? flagged : published)
+    .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')))
+    .slice(0, PROMO_MAX_DESIGNS);
+  console.log(`Promoting ${designs.length} design(s) [${flagged.length ? 'featured flag' : 'newest published'}]: ${designs.map(d => d.slug).join(', ')}`);
   const bySlug = Object.fromEntries(designs.map(d => [d.slug, d]));
 
   const promo = await claudeDraftPromo(designs);
