@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'draft = generate designs + previews for approval; publish = publish approved designs to the store'
+        description: 'draft = generate designs + previews; mockups = create hidden draft products + real mockups; publish = make approved designs live'
         type: choice
-        options: [draft, publish]
+        options: [draft, mockups, publish]
         default: draft
       count:
         description: 'How many designs to draft (draft mode only)'

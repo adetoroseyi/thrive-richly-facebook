@@ -6,10 +6,12 @@
 //   node scripts/pod/generate-pod.js --mode draft [--count 4]
 //     Drafts designs with Claude, renders preview PNGs into pod-designs/previews/,
 //     appends entries (approved: false) to design-queue.json. Nothing touches Printify.
+//   node scripts/pod/generate-pod.js --mode mockups
+//     Creates DRAFT products on Printify for every status="draft" design (not
+//     customer-visible) and records real mockup image URLs for human review.
 //   node scripts/pod/generate-pod.js --mode publish
-//     Publishes every queue entry with approved=true and status="draft": renders
-//     full print files, uploads to Printify, creates one product per PRODUCTS type,
-//     publishes them to the store, records product ids + mockup URLs.
+//     Publishes every queue entry with approved=true: creates products first if
+//     mockups mode was skipped, then makes them live on the Pop-Up Store.
 //
 // Required env (or .env): ANTHROPIC_API_KEY (draft), PRINTIFY_API_TOKEN (publish).
 // Key values are never printed. Approval is a human decision — this script never
@@ -212,11 +214,77 @@ function productDescription(design) {
   return `"${quote}" — an original Thrive Richly design for people quietly building wealth: simple money habits, no hype, no get-rich-quick.\n\nPrinted on demand. Check the size chart before ordering.`;
 }
 
+// Renders + uploads print files and creates one DRAFT product per PRODUCTS type.
+// Draft products are visible only in the Printify dashboard, never to customers.
+async function createDraftProducts(design, shop, products) {
+  const files = {};
+  for (const theme of ['light', 'dark']) {
+    const file = path.join(PRINT_DIR, `${design.slug}-${theme}.png`);
+    await renderPrintFile(design, theme, file);
+    files[theme] = await uploadPng(file);
+    console.log(`  uploaded ${theme} print file (image id ${files[theme]})`);
+  }
+  design.products = [];
+  for (const p of products) {
+    const title = `${design.quote_lines.join(' ')} · ${p.label}`;
+    const created = await printify('POST', `/v1/shops/${shop.id}/products.json`, {
+      title,
+      description: productDescription(design),
+      blueprint_id: p.blueprintId,
+      print_provider_id: p.providerId,
+      variants: p.variantIds.map(id => ({ id, price: p.price, is_enabled: true })),
+      print_areas: [{
+        variant_ids: p.variantIds,
+        placeholders: [{ position: 'front', images: [{ id: files[p.design], x: 0.5, y: 0.5, scale: 1, angle: 0 }] }],
+      }],
+      tags: ['personal finance', 'money', 'motivation', 'wealth', 'saving', 'investing'],
+    });
+    const full = await printify('GET', `/v1/shops/${shop.id}/products/${created.id}.json`);
+    const mockup = (full.images || []).find(i => i.is_default) || (full.images || [])[0];
+    design.products.push({ key: p.key, title, productId: created.id, mockupUrl: mockup ? mockup.src : null });
+    appendPodLog({
+      timestamp: new Date().toISOString(),
+      slug: design.slug,
+      product: p.key,
+      title,
+      productId: created.id,
+      price: p.price,
+      mockupUrl: mockup ? mockup.src : null,
+      status: 'created-draft',
+    });
+    console.log(`  ${p.key}: draft product created (${created.id}) mockup: ${mockup ? mockup.src : 'none yet'}`);
+    await sleep(1500);
+  }
+}
+
+async function runMockups() {
+  const queue = loadQueue();
+  const pending = queue.designs.filter(d => d.status === 'draft');
+  if (!pending.length) { console.log('No designs with status "draft" in the queue.'); return; }
+  const shop = await getShop();
+  console.log(`Creating DRAFT products (not customer-visible) in shop "${shop.title}" (id ${shop.id}).`);
+  const products = await resolveProducts();
+  fs.mkdirSync(PRINT_DIR, { recursive: true });
+  for (const design of pending) {
+    console.log(`\n--- ${design.slug} ---`);
+    try {
+      await createDraftProducts(design, shop, products);
+      design.status = 'mockups-ready';
+    } catch (err) {
+      design.status = 'failed';
+      design.error = String(err.message || err);
+      console.error(`  FAILED: ${design.error}`);
+    }
+    saveQueue(queue);
+  }
+  console.log('\nDone. Review mockup URLs in the queue/log, set "approved": true on keepers, then run mode=publish.');
+}
+
 async function runPublish() {
   const queue = loadQueue();
-  const pending = queue.designs.filter(d => d.approved === true && d.status === 'draft');
+  const pending = queue.designs.filter(d => d.approved === true && (d.status === 'draft' || d.status === 'mockups-ready'));
   if (!pending.length) {
-    console.log('No approved draft designs in the queue. Set "approved": true on the designs to publish.');
+    console.log('No approved unpublished designs in the queue. Set "approved": true on the designs to publish.');
     return;
   }
   const shop = await getShop();
@@ -227,45 +295,21 @@ async function runPublish() {
   for (const design of pending) {
     console.log(`\n--- ${design.slug} ---`);
     try {
-      const files = {};
-      for (const theme of ['light', 'dark']) {
-        const file = path.join(PRINT_DIR, `${design.slug}-${theme}.png`);
-        await renderPrintFile(design, theme, file);
-        files[theme] = await uploadPng(file);
-        console.log(`  uploaded ${theme} print file (image id ${files[theme]})`);
-      }
-      design.products = [];
-      for (const p of products) {
-        const title = `${design.quote_lines.join(' ')} · ${p.label}`;
-        const created = await printify('POST', `/v1/shops/${shop.id}/products.json`, {
-          title,
-          description: productDescription(design),
-          blueprint_id: p.blueprintId,
-          print_provider_id: p.providerId,
-          variants: p.variantIds.map(id => ({ id, price: p.price, is_enabled: true })),
-          print_areas: [{
-            variant_ids: p.variantIds,
-            placeholders: [{ position: 'front', images: [{ id: files[p.design], x: 0.5, y: 0.5, scale: 1, angle: 0 }] }],
-          }],
-          tags: ['personal finance', 'money', 'motivation', 'wealth', 'saving', 'investing'],
-        });
-        await printify('POST', `/v1/shops/${shop.id}/products/${created.id}/publish.json`, {
+      if (!design.products || !design.products.length) await createDraftProducts(design, shop, products);
+      for (const prod of design.products) {
+        await printify('POST', `/v1/shops/${shop.id}/products/${prod.productId}/publish.json`, {
           title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
         });
-        const full = await printify('GET', `/v1/shops/${shop.id}/products/${created.id}.json`);
-        const mockup = (full.images || []).find(i => i.is_default) || (full.images || [])[0];
-        design.products.push({ key: p.key, productId: created.id, mockupUrl: mockup ? mockup.src : null });
         appendPodLog({
           timestamp: new Date().toISOString(),
           slug: design.slug,
-          product: p.key,
-          title,
-          productId: created.id,
-          price: p.price,
-          mockupUrl: mockup ? mockup.src : null,
+          product: prod.key,
+          title: prod.title,
+          productId: prod.productId,
+          mockupUrl: prod.mockupUrl,
           status: 'published',
         });
-        console.log(`  ${p.key}: published (product ${created.id})`);
+        console.log(`  ${prod.key}: published (product ${prod.productId})`);
         await sleep(1500);
       }
       design.status = 'published';
@@ -284,8 +328,9 @@ async function main() {
   const mode = arg('--mode', 'draft');
   const count = parseInt(arg('--count', '4'), 10);
   if (mode === 'draft') return runDraft(count);
+  if (mode === 'mockups') return runMockups();
   if (mode === 'publish') return runPublish();
-  throw new Error(`Unknown mode "${mode}" (use draft or publish).`);
+  throw new Error(`Unknown mode "${mode}" (use draft, mockups, or publish).`);
 }
 
 main().catch(e => { console.error(e.message || e); process.exit(1); });
