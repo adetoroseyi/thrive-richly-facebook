@@ -1,4 +1,56 @@
 {
   "description": "POD design queue. Filled by generate-pod.js mode=draft; published by mode=publish. A design publishes only when approved=true (human decision) and status=draft. Never edit published entries.",
-  "designs": []
+  "designs": [
+    {
+      "slug": "boring-on-purpose",
+      "quote_lines": [
+        "Boring With",
+        "My Money",
+        "Rich On Purpose"
+      ],
+      "subline": "THRIVE RICHLY",
+      "caption": "Boring is a strategy. While everyone chases the next big thing, you automate, you invest, you wait.\n\nThe quiet accounts win.\n\nBoring on purpose. Rich on purpose.\n\n#moneymindset #wealthbuilding",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-02T18:48:28.005Z"
+    },
+    {
+      "slug": "future-me-comes-first",
+      "quote_lines": [
+        "Future Me",
+        "Gets Paid",
+        "First"
+      ],
+      "subline": "pay yourself first",
+      "caption": "Before the bills. Before the wants. Future you gets a cut off the top.\n\nThat's not restriction. That's respect.\n\nWho are you building for?\n\n#personalfinance #moneymindset",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-02T18:48:28.058Z"
+    },
+    {
+      "slug": "calm-with-money",
+      "quote_lines": [
+        "Calm",
+        "With Money",
+        "Free By Habit"
+      ],
+      "subline": "THRIVE RICHLY",
+      "caption": "Calm isn't luck. It's a system running in the background while you sleep.\n\nSmall habits. Steady hands.\n\nFreedom is built, not found.\n\n#wealthbuilding #moneymindset",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-02T18:48:28.109Z"
+    },
+    {
+      "slug": "i-dont-chase-i-compound",
+      "quote_lines": [
+        "I Don't Chase",
+        "I Compound"
+      ],
+      "subline": "boring = rich",
+      "caption": "Chasing burns you out. Compounding just keeps working.\n\nTime does the heavy lifting when you let it.\n\nSlow money is real money.\n\n#personalfinance #wealthbuilding",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-02T18:48:28.158Z"
+    }
+  ]
 }
