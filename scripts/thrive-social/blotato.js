@@ -55,13 +55,11 @@ const PLATFORMS = {
     }),
   },
   youtube: {
-    accountId: '42081',
-    // privacyStatus stays 'unlisted' until the connected channel is confirmed to be
-    // the Thrive Richly one (Blotato shows "TOVentures LTD"); then flip to 'public'.
+    accountId: '42081',                  // Thrive Richly channel (verified 2026-07-02)
     reelTarget: (hook) => ({
       targetType: 'youtube',
       title: youtubeTitle(hook),
-      privacyStatus: 'unlisted',
+      privacyStatus: 'public',
       shouldNotifySubscribers: false,
     }),
   },

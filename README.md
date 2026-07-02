@@ -21,7 +21,7 @@ A Claude Code skill that drafts on-brand content (Reels-first), generates video 
 
 On-demand batches of fresh Reels: Claude drafts scripts at run time (so content reflects the current date and recent posts), Pexels supplies licensed b-roll, Google TTS voices it, Remotion renders 1080x1920 video free on the GitHub runner, and Blotato schedules 5-10 posts staggered across the day (9:00/12:00/15:00/18:00/21:00 UTC).
 
-**Fan-out:** every reel (burst and queue) publishes to all four connected accounts — Facebook, Instagram (@thrive.richly), TikTok (@thrive.richly), and YouTube Shorts. Link/text posts stay Facebook-only. Platform account ids and per-platform target fields live in `scripts/thrive-social/blotato.js` (`PLATFORMS`). YouTube posts are `unlisted` until the connected channel is verified; flip `privacyStatus` to `public` in `PLATFORMS.youtube` after the first test upload.
+**Fan-out:** every reel (burst and queue) publishes to all four connected accounts — Facebook, Instagram (@thrive.richly), TikTok (@thrive.richly), and YouTube Shorts. Link/text posts stay Facebook-only. Platform account ids and per-platform target fields live in `scripts/thrive-social/blotato.js` (`PLATFORMS`).
 
 **Invoke:** Actions tab → "Burst Reels" → Run workflow. `mode: draft` prints the scripts and captions without rendering or publishing (review first); `mode: publish` runs the full pipeline. Locally: `node scripts/burst/generate-burst.js --mode draft --count 5`.
 
