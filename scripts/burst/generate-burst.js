@@ -20,6 +20,8 @@ const REMOTION_DIR = path.join(REPO, 'remotion-burst');
 const ASSETS_DIR = path.join(REMOTION_DIR, 'public', 'assets');
 const OUT_DIR = path.join(REMOTION_DIR, 'out');
 const LOG_FILE = path.join(REPO, 'published-log.jsonl');
+const POD_QUEUE = path.join(REPO, 'scripts', 'pod', 'design-queue.json');
+const STORE_URL = 'https://thrive-richly.printify.me/';
 const SLOT_HOURS_UTC = [9, 12, 15, 18, 21];
 
 function arg(flag, fallback) {
@@ -225,9 +227,133 @@ async function schedulePost(platformKey, post, mediaUrl, scheduledTime) {
   return created.postSubmissionId || created.id;
 }
 
+// ---------- promo mode: one merch-reveal reel from published POD mockups ----------
+
+const PROMO_SCHEMA = {
+  type: 'object',
+  properties: {
+    hook: { type: 'string', description: 'First spoken line; must stop the scroll' },
+    caption: { type: 'string', description: 'Social caption; playful, no hard sell; the store link is appended automatically' },
+    scenes: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          voiceover: { type: 'string', description: '1-2 short spoken sentences' },
+          slug: { type: 'string', description: 'The design slug this scene shows' },
+        },
+        required: ['voiceover', 'slug'],
+        additionalProperties: false,
+      },
+      description: 'Exactly one scene per design, plus a final CTA scene reusing the best design slug. 3-5 scenes total.',
+    },
+  },
+  required: ['hook', 'caption', 'scenes'],
+  additionalProperties: false,
+};
+
+async function claudeDraftPromo(designs) {
+  const key = loadKey('ANTHROPIC_API_KEY');
+  const brandVoice = fs.readFileSync(path.join(REPO, 'brand-voice.md'), 'utf8');
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+    body: JSON.stringify({
+      model: 'claude-opus-4-8',
+      max_tokens: 4000,
+      thinking: { type: 'adaptive' },
+      output_config: { format: { type: 'json_schema', schema: PROMO_SCHEMA } },
+      system: `You are the social media manager for Thrive Richly. Follow this brand voice document exactly:\n\n${brandVoice}`,
+      messages: [{
+        role: 'user',
+        content: `We just launched original merch. Write ONE playful product-reveal reel (voiceover over product mockup photos). Tone: in on the joke, zero infomercial energy — we are proud of how boring our money habits are. The designs:\n${designs.map(d => `- slug "${d.slug}": "${d.quote_lines.join(' / ')}" (${d.subline || 'no subline'})`).join('\n')}\nScenes: one per design plus a short final CTA scene ("link in bio / caption" — never read a URL aloud). Each voiceover 1-2 short sentences. The caption should make someone smile, mention prices start under $16 (the mug), and NOT include a URL (appended automatically).`,
+      }],
+    }),
+  });
+  const json = await res.json();
+  if (!res.ok) throw new Error(`Claude API error ${res.status}: ${JSON.stringify(json)}`);
+  if (json.stop_reason === 'refusal') throw new Error('Claude declined the promo request (stop_reason: refusal).');
+  const text = json.content.find(b => b.type === 'text');
+  if (!text) throw new Error('No text block in Claude response.');
+  return JSON.parse(text.text);
+}
+
+async function downloadFile(url, dest) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Download failed ${res.status}: ${url}`);
+  fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
+}
+
+async function runPromo() {
+  const podQueue = JSON.parse(fs.readFileSync(POD_QUEUE, 'utf8'));
+  const designs = podQueue.designs.filter(d => d.status === 'published' && d.products && d.products.length);
+  if (!designs.length) throw new Error('No published POD designs to promote — run the POD pipeline first.');
+  const bySlug = Object.fromEntries(designs.map(d => [d.slug, d]));
+
+  const promo = await claudeDraftPromo(designs);
+  console.log(`Promo hook: ${promo.hook}\nCaption:\n${promo.caption}`);
+  fs.mkdirSync(ASSETS_DIR, { recursive: true });
+  fs.mkdirSync(OUT_DIR, { recursive: true });
+
+  const scenes = [];
+  const promoScenes = promo.scenes.slice(0, 6);
+  for (let j = 0; j < promoScenes.length; j++) {
+    const s = promoScenes[j];
+    const design = bySlug[s.slug] || designs[j % designs.length];
+    const prod = design.products[j % design.products.length];   // vary product type across scenes
+    const imgFile = `promo-s${j}.jpg`;
+    await downloadFile(prod.mockupUrl, path.join(ASSETS_DIR, imgFile));
+    await tts(s.voiceover, path.join(ASSETS_DIR, `promo-s${j}.mp3`));
+    scenes.push({ video: '', image: `assets/${imgFile}`, audio: `assets/promo-s${j}.mp3`, text: s.voiceover });
+  }
+
+  const propsPath = path.join(REMOTION_DIR, 'props-promo.json');
+  fs.writeFileSync(propsPath, JSON.stringify({ scenes, sceneDurations: scenes.map(() => 3) }));
+  const outPath = path.join(OUT_DIR, 'promo.mp4');
+  execFileSync('npx', ['remotion', 'render', 'BurstReel', outPath, `--props=${propsPath}`], {
+    cwd: REMOTION_DIR,
+    stdio: 'inherit',
+    shell: process.platform === 'win32',
+  });
+  console.log(`Rendered: ${outPath}`);
+
+  const mediaUrl = await blotatoUpload(outPath);
+  console.log(`Uploaded to Blotato: ${mediaUrl}`);
+  const caption = `${promo.caption}\n\n🛒 Shop: ${STORE_URL} (link in bio)`;
+  const post = { caption, hook: promo.hook };
+  const time = scheduleTimes(1)[0];
+  for (const platformKey of Object.keys(PLATFORMS)) {
+    const logEntry = {
+      timestamp: new Date().toISOString(),
+      format: 'reel',
+      source: 'promo',
+      platform: platformKey,
+      hook: promo.hook,
+      caption,
+      mediaUrl,
+      postSubmissionId: null,
+      scheduledTime: time,
+      publicUrl: null,
+      status: 'scheduled',
+    };
+    try {
+      logEntry.postSubmissionId = await schedulePost(platformKey, post, mediaUrl, time);
+      console.log(`  ${platformKey}: scheduled for ${time} (postSubmissionId=${logEntry.postSubmissionId})`);
+    } catch (err) {
+      logEntry.status = 'schedule-failed';
+      logEntry.error = String(err.message || err);
+      console.error(`  ${platformKey}: scheduling FAILED — ${logEntry.error}`);
+    }
+    appendLog(logEntry);
+    await sleep(2000);
+  }
+  console.log(`\nPromo reel scheduled for ${time} on all platforms.`);
+}
+
 async function main() {
   const mode = arg('--mode', 'draft');
   const count = parseInt(arg('--count', '5'), 10);
+  if (mode === 'promo') return runPromo();
 
   console.log(`Burst run: mode=${mode} count=${count}`);
   const posts = await claudeDraftPosts(count);

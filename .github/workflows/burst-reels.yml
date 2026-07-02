@@ -10,9 +10,9 @@ on:
         description: 'How many reels to generate (5-10 recommended)'
         default: '5'
       mode:
-        description: 'draft = print scripts/captions only; publish = render + schedule via Blotato'
+        description: 'draft = print scripts/captions only; publish = render + schedule via Blotato; promo = one merch-reveal reel from POD mockups'
         type: choice
-        options: [draft, publish]
+        options: [draft, publish, promo]
         default: draft
 
 permissions:
@@ -35,7 +35,7 @@ jobs:
           node-version: '20'
 
       - name: Install Remotion dependencies
-        if: inputs.mode == 'publish'
+        if: inputs.mode != 'draft'
         working-directory: remotion-burst
         run: npm install
 
