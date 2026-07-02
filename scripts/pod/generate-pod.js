@@ -35,7 +35,7 @@ const PRODUCTS = [
   { key: 'tee', label: 'Premium Tee', blueprintTitle: 'Unisex Garment-Dyed T-shirt', colors: /black|pepper|navy|ink|graphite/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2199, design: 'light' },
   { key: 'crewneck', label: 'Crewneck Sweatshirt', blueprintTitle: 'Unisex Heavy Blend™ Crewneck Sweatshirt', colors: /black|navy|dark|charcoal/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2999, design: 'light' },
   { key: 'hoodie', label: 'Hoodie', blueprintTitle: 'Unisex Heavy Blend™ Hooded Sweatshirt', colors: /black|navy|dark|charcoal/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 3699, design: 'light' },
-  { key: 'mug', label: 'Mug 11oz', blueprintTitle: 'Mug 11oz', colors: /white/i, sizes: null, price: 1599, design: 'dark' },
+  { key: 'mug', label: 'Mug 11oz', blueprintTitle: 'Mug 11oz', colors: null, sizes: null, price: 1599, design: 'dark' },  // white-only blueprint, variants carry no color option
 ];
 const PREFERRED_PROVIDERS = ['Monster Digital', 'SwiftPOD', 'Print Geek', 'MyLocker', 'District Photo'];
 
@@ -181,7 +181,7 @@ async function resolveProducts() {
     const variants = await printify('GET', `/v1/catalog/blueprints/${bp.id}/print_providers/${provider.id}/variants.json`);
     const list = variants.variants || variants;
     const matched = list.filter(v => {
-      const colorOk = p.colors.test(v.options?.color || '');
+      const colorOk = !p.colors || p.colors.test(v.options?.color || '');
       const sizeOk = !p.sizes || p.sizes.includes(v.options?.size);
       return colorOk && sizeOk;
     }).slice(0, 40);
