@@ -11,8 +11,34 @@
       "subline": "THRIVE RICHLY",
       "caption": "Boring is a strategy. While everyone chases the next big thing, you automate, you invest, you wait.\n\nThe quiet accounts win.\n\nBoring on purpose. Rich on purpose.\n\n#moneymindset #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-02T18:48:28.005Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-02T18:48:28.005Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Boring With My Money Rich On Purpose · Premium Tee",
+          "productId": "6a46b59445705605d9100aa4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b59445705605d9100aa4/79048/98445/boring-with-my-money-rich-on-purpose-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Boring With My Money Rich On Purpose · Crewneck Sweatshirt",
+          "productId": "6a46b59d49991797cf029530",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b59d49991797cf029530/25459/98502/boring-with-my-money-rich-on-purpose-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Boring With My Money Rich On Purpose · Hoodie",
+          "productId": "6a46b5a5fd17053d220ada5c",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5a5fd17053d220ada5c/32920/98424/boring-with-my-money-rich-on-purpose-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Boring With My Money Rich On Purpose · Mug 11oz",
+          "productId": "6a46b5aeb216e2d4a401f604",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5aeb216e2d4a401f604/33719/6400/boring-with-my-money-rich-on-purpose-mug-11oz.jpg?camera_label=front"
+        }
+      ]
     },
     {
       "slug": "future-me-comes-first",
@@ -24,8 +50,34 @@
       "subline": "pay yourself first",
       "caption": "Before the bills. Before the wants. Future you gets a cut off the top.\n\nThat's not restriction. That's respect.\n\nWho are you building for?\n\n#personalfinance #moneymindset",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-02T18:48:28.058Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-02T18:48:28.058Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Future Me Gets Paid First · Premium Tee",
+          "productId": "6a46b5b42a30959f150b5b2b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5b42a30959f150b5b2b/79048/98445/future-me-gets-paid-first-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Future Me Gets Paid First · Crewneck Sweatshirt",
+          "productId": "6a46b5bc4144d0b56903704b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5bc4144d0b56903704b/25459/98502/future-me-gets-paid-first-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Future Me Gets Paid First · Hoodie",
+          "productId": "6a46b5c18a4fd263a300985a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5c18a4fd263a300985a/32920/98424/future-me-gets-paid-first-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Future Me Gets Paid First · Mug 11oz",
+          "productId": "6a46b5c8fd17053d220ada63",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5c8fd17053d220ada63/33719/6400/future-me-gets-paid-first-mug-11oz.jpg?camera_label=front"
+        }
+      ]
     },
     {
       "slug": "calm-with-money",
@@ -37,8 +89,34 @@
       "subline": "THRIVE RICHLY",
       "caption": "Calm isn't luck. It's a system running in the background while you sleep.\n\nSmall habits. Steady hands.\n\nFreedom is built, not found.\n\n#wealthbuilding #moneymindset",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-02T18:48:28.109Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-02T18:48:28.109Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Calm With Money Free By Habit · Premium Tee",
+          "productId": "6a46b5d04144d0b569037055",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5d04144d0b569037055/79048/98445/calm-with-money-free-by-habit-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Calm With Money Free By Habit · Crewneck Sweatshirt",
+          "productId": "6a46b5d714328a35af07320e",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5d714328a35af07320e/25459/98502/calm-with-money-free-by-habit-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Calm With Money Free By Habit · Hoodie",
+          "productId": "6a46b5de877fac4d210d60df",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5de877fac4d210d60df/32920/98424/calm-with-money-free-by-habit-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Calm With Money Free By Habit · Mug 11oz",
+          "productId": "6a46b5e4bd32807aa509d9b4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5e4bd32807aa509d9b4/33719/6400/calm-with-money-free-by-habit-mug-11oz.jpg?camera_label=front"
+        }
+      ]
     },
     {
       "slug": "i-dont-chase-i-compound",
@@ -49,8 +127,34 @@
       "subline": "boring = rich",
       "caption": "Chasing burns you out. Compounding just keeps working.\n\nTime does the heavy lifting when you let it.\n\nSlow money is real money.\n\n#personalfinance #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-02T18:48:28.158Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-02T18:48:28.158Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "I Don't Chase I Compound · Premium Tee",
+          "productId": "6a46b5eb49991797cf029558",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5eb49991797cf029558/79048/98445/i-dont-chase-i-compound-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "I Don't Chase I Compound · Crewneck Sweatshirt",
+          "productId": "6a46b5f3877fac4d210d60ed",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5f3877fac4d210d60ed/25459/98502/i-dont-chase-i-compound-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "I Don't Chase I Compound · Hoodie",
+          "productId": "6a46b5f97ade45f51207bbfb",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b5f97ade45f51207bbfb/32920/98424/i-dont-chase-i-compound-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "I Don't Chase I Compound · Mug 11oz",
+          "productId": "6a46b6027ade45f51207bc00",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46b6027ade45f51207bc00/33719/6400/i-dont-chase-i-compound-mug-11oz.jpg?camera_label=front"
+        }
+      ]
     }
   ]
 }
