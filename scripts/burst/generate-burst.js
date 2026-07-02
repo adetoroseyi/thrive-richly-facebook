@@ -180,8 +180,23 @@ async function blotatoUpload(filePath) {
   return created.publicUrl;
 }
 
+// Slots already holding a scheduled post (from previous runs) must not be reused —
+// two reels publishing in the same minute split each other's reach.
+function takenSlots() {
+  const taken = new Set();
+  if (!fs.existsSync(LOG_FILE)) return taken;
+  for (const line of fs.readFileSync(LOG_FILE, 'utf8').trim().split('\n')) {
+    try {
+      const e = JSON.parse(line);
+      if (e.scheduledTime && e.status === 'scheduled') taken.add(e.scheduledTime);
+    } catch { /* skip malformed lines */ }
+  }
+  return taken;
+}
+
 function scheduleTimes(count) {
   const times = [];
+  const taken = takenSlots();
   const now = Date.now() + 10 * 60 * 1000; // nothing sooner than 10 min out
   let day = 0;
   while (times.length < count) {
@@ -190,7 +205,7 @@ function scheduleTimes(count) {
       const t = new Date();
       t.setUTCDate(t.getUTCDate() + day);
       t.setUTCHours(h, 0, 0, 0);
-      if (t.getTime() > now) times.push(t.toISOString());
+      if (t.getTime() > now && !taken.has(t.toISOString())) times.push(t.toISOString());
     }
     day++;
   }
