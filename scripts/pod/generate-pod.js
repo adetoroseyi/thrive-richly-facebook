@@ -79,12 +79,10 @@ const DESIGNS_SCHEMA = {
           slug: { type: 'string', description: 'kebab-case id, e.g. "pay-yourself-first"' },
           quote_lines: {
             type: 'array',
-            items: { type: 'string', maxLength: 22 },
-            minItems: 1,
-            maxItems: 3,
-            description: 'The design text, split into 1-3 short lines of max 22 chars each',
+            items: { type: 'string', description: 'One short line, MAX 22 characters' },
+            description: 'The design text, split into 1-3 short lines (never more than 3) of max 22 chars each',
           },
-          subline: { type: 'string', maxLength: 36, description: 'Small accent line under the quote, or empty string' },
+          subline: { type: 'string', description: 'Small accent line under the quote (max 36 chars), or empty string' },
           caption: { type: 'string', description: 'Social caption for promoting this product later' },
         },
         required: ['slug', 'quote_lines', 'subline', 'caption'],
@@ -131,6 +129,10 @@ async function runDraft(count) {
   fs.mkdirSync(PREVIEW_DIR, { recursive: true });
   const queue = loadQueue();
   for (const d of designs) {
+    // Enforce the limits the schema can't express (API rejects maxItems/maxLength).
+    d.quote_lines = d.quote_lines.slice(0, 3).map(l => l.trim().slice(0, 22)).filter(Boolean);
+    if (!d.quote_lines.length) { console.log(`Skipping ${d.slug}: empty quote_lines`); continue; }
+    d.subline = (d.subline || '').trim().slice(0, 36);
     if (queue.designs.some(q => q.slug === d.slug)) d.slug = `${d.slug}-${Date.now() % 10000}`;
     const previewLight = path.join(PREVIEW_DIR, `${d.slug}-garment.png`);
     const previewDark = path.join(PREVIEW_DIR, `${d.slug}-mug.png`);
