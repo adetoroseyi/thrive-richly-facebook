@@ -29,13 +29,14 @@ const PREVIEW_DIR = path.join(REPO, 'pod-designs', 'previews');
 const PRINT_DIR = path.join(REPO, 'pod-designs', 'print');       // gitignored, regenerated
 const POD_LOG = path.join(REPO, 'pod-products-log.jsonl');
 
-// Product lineup. blueprintTitle must match the Printify catalog title; colors is
-// a regex over variant color names; design picks which theme goes on the garment.
+// Product lineup. blueprintTitle must match the Printify catalog title.
+// darkColors variants get the "light" design (white text); lightColors variants get
+// the "dark" design (charcoal text) — so text always contrasts with the garment.
 const PRODUCTS = [
-  { key: 'tee', label: 'Premium Tee', blueprintTitle: 'Unisex Garment-Dyed T-shirt', colors: /black|pepper|navy|ink|graphite/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2199, design: 'light' },
-  { key: 'crewneck', label: 'Crewneck Sweatshirt', blueprintTitle: 'Unisex Heavy Blend™ Crewneck Sweatshirt', colors: /black|navy|dark|charcoal/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2999, design: 'light' },
-  { key: 'hoodie', label: 'Hoodie', blueprintTitle: 'Unisex Heavy Blend™ Hooded Sweatshirt', colors: /black|navy|dark|charcoal/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 3699, design: 'light' },
-  { key: 'mug', label: 'Mug 11oz', blueprintTitle: 'Mug 11oz', colors: null, sizes: null, price: 1599, design: 'dark' },  // white-only blueprint, variants carry no color option
+  { key: 'tee', label: 'Premium Tee', blueprintTitle: 'Unisex Garment-Dyed T-shirt', darkColors: /black|pepper|navy|ink|graphite/i, lightColors: /white|ivory|ash/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2199 },
+  { key: 'crewneck', label: 'Crewneck Sweatshirt', blueprintTitle: 'Unisex Heavy Blend™ Crewneck Sweatshirt', darkColors: /black|navy|charcoal|dark chocolate/i, lightColors: /^white$|ash|sand|sport grey/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 2999 },
+  { key: 'hoodie', label: 'Hoodie', blueprintTitle: 'Unisex Heavy Blend™ Hooded Sweatshirt', darkColors: /black|navy|charcoal|dark chocolate/i, lightColors: /^white$|ash|sand|sport grey/i, sizes: ['S', 'M', 'L', 'XL', '2XL'], price: 3699 },
+  { key: 'mug', label: 'Mug 11oz', blueprintTitle: 'Mug 11oz', darkColors: null, lightColors: /.*/, sizes: null, price: 1599 },  // white-only blueprint, variants carry no color option
 ];
 const PREFERRED_PROVIDERS = ['Monster Digital', 'SwiftPOD', 'Print Geek', 'MyLocker', 'District Photo'];
 
@@ -186,22 +187,20 @@ async function resolveProducts() {
     const provider = PREFERRED_PROVIDERS.map(n => providers.find(pr => pr.title === n)).find(Boolean) || providers[0];
     const variants = await printify('GET', `/v1/catalog/blueprints/${bp.id}/print_providers/${provider.id}/variants.json`);
     const list = variants.variants || variants;
-    const matched = list.filter(v => {
-      const colorOk = !p.colors || p.colors.test(v.options?.color || '');
-      const sizeOk = !p.sizes || p.sizes.includes(v.options?.size);
-      return colorOk && sizeOk;
-    }).slice(0, 40);
-    if (!matched.length) {
+    const sizeOk = v => !p.sizes || p.sizes.includes(v.options?.size);
+    const darkVariantIds = list.filter(v => sizeOk(v) && p.darkColors && p.darkColors.test(v.options?.color || '')).slice(0, 30).map(v => v.id);
+    const lightVariantIds = list.filter(v => sizeOk(v) && p.lightColors && p.lightColors.test(v.options?.color || '')).slice(0, 30).map(v => v.id);
+    if (!darkVariantIds.length && !lightVariantIds.length) {
       const colors = [...new Set(list.map(v => v.options?.color))].slice(0, 20);
-      throw new Error(`No variants matched for "${bp.title}" with ${p.colors}. Available colors: ${JSON.stringify(colors)}`);
+      throw new Error(`No variants matched for "${bp.title}". Available colors: ${JSON.stringify(colors)}`);
     }
     resolved.push({
-      key: p.key, label: p.label, price: p.price, design: p.design,
+      key: p.key, label: p.label, price: p.price,
       blueprintId: bp.id, blueprintTitle: bp.title,
       providerId: provider.id, providerTitle: provider.title,
-      variantIds: matched.map(v => v.id),
+      darkVariantIds, lightVariantIds,
     });
-    console.log(`  ${p.key}: "${bp.title}" (bp ${bp.id}) via ${provider.title} (${provider.id}), ${matched.length} variants`);
+    console.log(`  ${p.key}: "${bp.title}" (bp ${bp.id}) via ${provider.title} (${provider.id}), ${darkVariantIds.length} dark + ${lightVariantIds.length} light variants`);
   }
   fs.writeFileSync(RESOLVED_FILE, JSON.stringify(resolved, null, 2) + '\n', 'utf8');
   return resolved;
@@ -233,16 +232,20 @@ async function createDraftProducts(design, shop, products) {
   design.products = [];
   for (const p of products) {
     const title = `${design.quote_lines.join(' ')} · ${p.label}`;
+    // Contrast rule: dark garments carry the light (white-text) design, light
+    // garments carry the dark (charcoal-text) design.
+    const darkIds = p.darkVariantIds || p.variantIds || [];
+    const lightIds = p.lightVariantIds || [];
+    const printAreas = [];
+    if (darkIds.length) printAreas.push({ variant_ids: darkIds, placeholders: [{ position: 'front', images: [{ id: files.light, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
+    if (lightIds.length) printAreas.push({ variant_ids: lightIds, placeholders: [{ position: 'front', images: [{ id: files.dark, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
     const created = await printify('POST', `/v1/shops/${shop.id}/products.json`, {
       title,
       description: productDescription(design),
       blueprint_id: p.blueprintId,
       print_provider_id: p.providerId,
-      variants: p.variantIds.map(id => ({ id, price: p.price, is_enabled: true })),
-      print_areas: [{
-        variant_ids: p.variantIds,
-        placeholders: [{ position: 'front', images: [{ id: files[p.design], x: 0.5, y: 0.5, scale: 1, angle: 0 }] }],
-      }],
+      variants: [...darkIds, ...lightIds].map(id => ({ id, price: p.price, is_enabled: true })),
+      print_areas: printAreas,
       tags: ['personal finance', 'money', 'motivation', 'wealth', 'saving', 'investing'],
     });
     const full = await printify('GET', `/v1/shops/${shop.id}/products/${created.id}.json`);
@@ -339,13 +342,57 @@ async function runPublish() {
   console.log('\nDone. Products are live on the Pop-Up Store; mockup URLs are in pod-products-log.jsonl.');
 }
 
+// Re-applies variants + print areas to already-published products (e.g. after a
+// color-mapping change). Contrast rule is enforced product-wide.
+async function runRefresh() {
+  const queue = loadQueue();
+  const live = queue.designs.filter(d => d.status === 'published' && d.products && d.products.length);
+  if (!live.length) { console.log('No published designs to refresh.'); return; }
+  const shop = await getShop();
+  const products = await resolveProducts();
+  const byKey = Object.fromEntries(products.map(p => [p.key, p]));
+  fs.mkdirSync(PRINT_DIR, { recursive: true });
+  for (const design of live) {
+    console.log(`\n--- refreshing ${design.slug} ---`);
+    const files = {};
+    for (const theme of ['light', 'dark']) {
+      const file = path.join(PRINT_DIR, `${design.slug}-${theme}.png`);
+      await renderPrintFile(design, theme, file);
+      files[theme] = await uploadPng(file);
+    }
+    for (const prod of design.products) {
+      const p = byKey[prod.key];
+      if (!p) { console.log(`  ${prod.key}: no config, skipped`); continue; }
+      const printAreas = [];
+      if (p.darkVariantIds.length) printAreas.push({ variant_ids: p.darkVariantIds, placeholders: [{ position: 'front', images: [{ id: files.light, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
+      if (p.lightVariantIds.length) printAreas.push({ variant_ids: p.lightVariantIds, placeholders: [{ position: 'front', images: [{ id: files.dark, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] });
+      try {
+        await printify('PUT', `/v1/shops/${shop.id}/products/${prod.productId}.json`, {
+          variants: [...p.darkVariantIds, ...p.lightVariantIds].map(id => ({ id, price: p.price, is_enabled: true })),
+          print_areas: printAreas,
+        });
+        await printify('POST', `/v1/shops/${shop.id}/products/${prod.productId}/publish.json`, {
+          title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
+        });
+        appendPodLog({ timestamp: new Date().toISOString(), slug: design.slug, product: prod.key, productId: prod.productId, status: 'refreshed' });
+        console.log(`  ${prod.key}: refreshed (${p.darkVariantIds.length} dark + ${p.lightVariantIds.length} light variants)`);
+      } catch (err) {
+        console.error(`  ${prod.key}: refresh FAILED — ${err.message}`);
+      }
+      await sleep(1500);
+    }
+  }
+  console.log('\nRefresh complete.');
+}
+
 async function main() {
   const mode = arg('--mode', 'draft');
   const count = parseInt(arg('--count', '4'), 10);
   if (mode === 'draft') return runDraft(count);
   if (mode === 'mockups') return runMockups();
   if (mode === 'publish') return runPublish();
-  throw new Error(`Unknown mode "${mode}" (use draft, mockups, or publish).`);
+  if (mode === 'refresh') return runRefresh();
+  throw new Error(`Unknown mode "${mode}" (use draft, mockups, publish, or refresh).`);
 }
 
 main().catch(e => { console.error(e.message || e); process.exit(1); });
