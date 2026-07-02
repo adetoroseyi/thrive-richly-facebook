@@ -5,7 +5,7 @@
       "id": 3,
       "format": "reel",
       "approved": true,
-      "status": "queued",
+      "status": "posted",
       "templateId": "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1",
       "caption": "Same salary. Same city. Wildly different futures.\n\nJames got a $300/month raise and upgraded his car.\nDavid got the same raise and automated it into an index fund.\n\n20 years later, at a 7% average annual return:\nJames has a 12-year-old car.\nDavid has about $156,000.\n\nThe raise was never the difference.\nThe system was.\n\n(Hypothetical illustration. Historical average return — not a guarantee.)\n\n#moneymindset #personalfinance #wealthbuilding",
       "videoInputs": {
@@ -37,8 +37,8 @@
         "aspectRatio": "9:16",
         "trimToVoiceover": true
       },
-      "postedAt": null,
-      "publicUrl": null
+      "postedAt": "2026-07-02T15:01:06.649Z",
+      "publicUrl": "https://facebook.com/reel/1948114689232202/"
     },
     {
       "id": 4,
