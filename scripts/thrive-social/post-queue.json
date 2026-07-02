@@ -45,7 +45,7 @@
       "id": 4,
       "format": "reel",
       "approved": true,
-      "status": "queued",
+      "status": "failed",
       "templateId": "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1",
       "caption": "7 money rules that quietly build wealth:\n\n1. Pay yourself first — automatically.\n2. Never finance a lifestyle. Only assets.\n3. If you can't buy it twice, you can't afford it.\n4. Invest before you feel ready. Time beats timing.\n5. Keep 3–6 months of expenses boring and liquid.\n6. Every raise: half to the future, half to today.\n7. Track your net worth, not your income.\n\nScreenshot this. Rule 4 pays for the rest.\n\n#personalfinance #moneyrules #wealthbuilding",
       "videoInputs": {
@@ -78,7 +78,8 @@
         "trimToVoiceover": true
       },
       "postedAt": null,
-      "publicUrl": null
+      "publicUrl": null,
+      "error": "Blotato API error 401 on POST /v2/videos/from-templates: {\"message\":\"Unauthorized\"}"
     },
     {
       "id": 5,
