@@ -11,7 +11,7 @@
       "subline": "THRIVE RICHLY",
       "caption": "Boring is a strategy. While everyone chases the next big thing, you automate, you invest, you wait.\n\nThe quiet accounts win.\n\nBoring on purpose. Rich on purpose.\n\n#moneymindset #wealthbuilding",
       "approved": true,
-      "status": "mockups-ready",
+      "status": "published",
       "createdAt": "2026-07-02T18:48:28.005Z",
       "products": [
         {
@@ -38,7 +38,8 @@
           "productId": "6a46b5aeb216e2d4a401f604",
           "mockupUrl": "https://images-api.printify.com/mockup/6a46b5aeb216e2d4a401f604/33719/6400/boring-with-my-money-rich-on-purpose-mug-11oz.jpg?camera_label=front"
         }
-      ]
+      ],
+      "publishedAt": "2026-07-02T19:17:18.674Z"
     },
     {
       "slug": "future-me-comes-first",
@@ -50,7 +51,7 @@
       "subline": "pay yourself first",
       "caption": "Before the bills. Before the wants. Future you gets a cut off the top.\n\nThat's not restriction. That's respect.\n\nWho are you building for?\n\n#personalfinance #moneymindset",
       "approved": true,
-      "status": "mockups-ready",
+      "status": "published",
       "createdAt": "2026-07-02T18:48:28.058Z",
       "products": [
         {
@@ -77,7 +78,8 @@
           "productId": "6a46b5c8fd17053d220ada63",
           "mockupUrl": "https://images-api.printify.com/mockup/6a46b5c8fd17053d220ada63/33719/6400/future-me-gets-paid-first-mug-11oz.jpg?camera_label=front"
         }
-      ]
+      ],
+      "publishedAt": "2026-07-02T19:17:35.112Z"
     },
     {
       "slug": "calm-with-money",
@@ -127,7 +129,7 @@
       "subline": "boring = rich",
       "caption": "Chasing burns you out. Compounding just keeps working.\n\nTime does the heavy lifting when you let it.\n\nSlow money is real money.\n\n#personalfinance #wealthbuilding",
       "approved": true,
-      "status": "mockups-ready",
+      "status": "published",
       "createdAt": "2026-07-02T18:48:28.158Z",
       "products": [
         {
@@ -154,7 +156,8 @@
           "productId": "6a46b6027ade45f51207bc00",
           "mockupUrl": "https://images-api.printify.com/mockup/6a46b6027ade45f51207bc00/33719/6400/i-dont-chase-i-compound-mug-11oz.jpg?camera_label=front"
         }
-      ]
+      ],
+      "publishedAt": "2026-07-02T19:17:50.662Z"
     }
   ]
 }
