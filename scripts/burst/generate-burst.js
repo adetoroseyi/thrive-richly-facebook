@@ -13,7 +13,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
-const { api: blotato, appendLog, sleep, ACCOUNT_ID, PAGE_ID } = require('../thrive-social/blotato.js');
+const { api: blotato, appendLog, sleep, PLATFORMS } = require('../thrive-social/blotato.js');
 
 const REPO = path.join(__dirname, '..', '..');
 const REMOTION_DIR = path.join(REPO, 'remotion-burst');
@@ -197,12 +197,13 @@ function scheduleTimes(count) {
   return times;
 }
 
-async function schedulePost(caption, mediaUrl, scheduledTime) {
+async function schedulePost(platformKey, post, mediaUrl, scheduledTime) {
+  const p = PLATFORMS[platformKey];
   const created = await blotato('POST', '/v2/posts', {
     post: {
-      accountId: ACCOUNT_ID,
-      content: { text: caption, platform: 'facebook', mediaUrls: [mediaUrl] },
-      target: { targetType: 'facebook', pageId: PAGE_ID, mediaType: 'reel' },
+      accountId: p.accountId,
+      content: { text: post.caption, platform: platformKey, mediaUrls: [mediaUrl] },
+      target: p.reelTarget(post.hook),
     },
     scheduledTime,
   });
@@ -246,21 +247,33 @@ async function main() {
     console.log(`Rendered: ${outPath}`);
     const mediaUrl = await blotatoUpload(outPath);
     console.log(`Uploaded to Blotato: ${mediaUrl}`);
-    const submissionId = await schedulePost(post.caption, mediaUrl, times[i]);
-    console.log(`Scheduled for ${times[i]} (postSubmissionId=${submissionId})`);
-    appendLog({
-      timestamp: new Date().toISOString(),
-      format: 'reel',
-      source: 'burst',
-      hook: post.hook,
-      caption: post.caption,
-      mediaUrl,
-      postSubmissionId: submissionId,
-      scheduledTime: times[i],
-      publicUrl: null,
-      status: 'scheduled',
-    });
-    await sleep(2000); // stay under Blotato rate limits
+    // Fan out to every connected platform. One platform failing must not stop
+    // the others — record the failure in the log and keep going.
+    for (const platformKey of Object.keys(PLATFORMS)) {
+      const logEntry = {
+        timestamp: new Date().toISOString(),
+        format: 'reel',
+        source: 'burst',
+        platform: platformKey,
+        hook: post.hook,
+        caption: post.caption,
+        mediaUrl,
+        postSubmissionId: null,
+        scheduledTime: times[i],
+        publicUrl: null,
+        status: 'scheduled',
+      };
+      try {
+        logEntry.postSubmissionId = await schedulePost(platformKey, post, mediaUrl, times[i]);
+        console.log(`  ${platformKey}: scheduled for ${times[i]} (postSubmissionId=${logEntry.postSubmissionId})`);
+      } catch (err) {
+        logEntry.status = 'schedule-failed';
+        logEntry.error = String(err.message || err);
+        console.error(`  ${platformKey}: scheduling FAILED — ${logEntry.error}`);
+      }
+      appendLog(logEntry);
+      await sleep(2000); // stay under Blotato rate limits
+    }
   }
   console.log(`\nDone: ${posts.length} reels scheduled across ${times[0]} … ${times[times.length - 1]}.`);
   console.log('Live URLs appear once Facebook publishes each one; check with: node scripts/thrive-social/blotato.js post-status <id>');

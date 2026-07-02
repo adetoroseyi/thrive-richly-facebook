@@ -23,6 +23,50 @@ const ACCOUNT_ID = '39401';              // Blotato Facebook account (Oluwaseyi 
 const PAGE_ID = '216309642249176';       // Facebook Page: Thrive Richly
 const LOG_FILE = path.join(__dirname, '..', '..', 'published-log.jsonl');
 
+// YouTube titles are capped at 100 chars; derive one from the hook.
+function youtubeTitle(hook) {
+  const clean = (hook || 'Money habits that quietly build wealth').replace(/\s+/g, ' ').trim();
+  return clean.length <= 95 ? clean : clean.slice(0, 92).trimEnd() + '...';
+}
+
+// Every connected Thrive Richly account (Blotato account ids from list-accounts).
+// Reels fan out to all four; link/text posts stay Facebook-only.
+// reelTarget(hook) returns the platform-specific target object for POST /v2/posts.
+const PLATFORMS = {
+  facebook: {
+    accountId: ACCOUNT_ID,
+    reelTarget: () => ({ targetType: 'facebook', pageId: PAGE_ID, mediaType: 'reel' }),
+  },
+  instagram: {
+    accountId: '56571',                  // @thrive.richly
+    reelTarget: () => ({ targetType: 'instagram', mediaType: 'reel' }),
+  },
+  tiktok: {
+    accountId: '49190',                  // @thrive.richly
+    reelTarget: () => ({
+      targetType: 'tiktok',
+      privacyLevel: 'PUBLIC_TO_EVERYONE',
+      disabledComments: false,
+      disabledDuet: false,
+      disabledStitch: false,
+      isBrandedContent: false,
+      isYourBrand: true,
+      isAiGenerated: true,               // honest: AI voiceover/imagery
+    }),
+  },
+  youtube: {
+    accountId: '42081',
+    // privacyStatus stays 'unlisted' until the connected channel is confirmed to be
+    // the Thrive Richly one (Blotato shows "TOVentures LTD"); then flip to 'public'.
+    reelTarget: (hook) => ({
+      targetType: 'youtube',
+      title: youtubeTitle(hook),
+      privacyStatus: 'unlisted',
+      shouldNotifySubscribers: false,
+    }),
+  },
+};
+
 function loadApiKey() {
   if (process.env.BLOTATO_API_KEY && process.env.BLOTATO_API_KEY.trim()) {
     return process.env.BLOTATO_API_KEY.trim();
@@ -211,4 +255,4 @@ if (require.main === module) {
   main().catch(e => { console.error(e.message || e); process.exit(1); });
 }
 
-module.exports = { api, loadApiKey, appendLog, sleep, ACCOUNT_ID, PAGE_ID, LOG_FILE };
+module.exports = { api, loadApiKey, appendLog, sleep, ACCOUNT_ID, PAGE_ID, LOG_FILE, PLATFORMS, youtubeTitle };
