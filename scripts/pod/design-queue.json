@@ -568,6 +568,60 @@
           "productId": "6a47181ebd32807aa50a0b6e"
         }
       ]
+    },
+    {
+      "slug": "if-i-bought-it-on-sale",
+      "quote_lines": [
+        "IF I BOUGHT IT",
+        "ON SALE",
+        "I MADE MONEY"
+      ],
+      "subline": "GIRL MATH",
+      "caption": "The math is mathing. Sale price minus retail price equals profit — that's just science. 🛍️ Tag someone whose girl math is undefeated.",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-03T03:06:59.658Z",
+      "source": "google-trends-2026-07"
+    },
+    {
+      "slug": "depreciating-gracefully",
+      "quote_lines": [
+        "DEPRECIATING",
+        "GRACEFULLY"
+      ],
+      "subline": "STRAIGHT-LINE, OBVIOUSLY",
+      "caption": "Aging is mandatory. Method selection is not. The only birthday shirt an accountant actually wants.",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-03T03:06:59.744Z",
+      "source": "google-trends-2026-07"
+    },
+    {
+      "slug": "maxed-out-401k-not-card",
+      "quote_lines": [
+        "MAXED OUT MY 401K",
+        "NOT MY CREDIT CARD"
+      ],
+      "subline": "THRIVE RICHLY",
+      "caption": "There are two kinds of maxing out. Choose the one future-you sends a thank-you note for.",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-03T03:06:59.858Z",
+      "source": "google-trends-2026-07"
+    },
+    {
+      "slug": "loud-budgeting-era",
+      "quote_lines": [
+        "I'M NOT CHEAP",
+        "I'M IN MY LOUD",
+        "BUDGETING ERA"
+      ],
+      "subline": "SAY IT WITH YOUR CHEST",
+      "caption": "No, I will not be attending the $200 birthday dinner. Yes, I will explain why at full volume. Loud budgeting is self-care.",
+      "approved": false,
+      "status": "draft",
+      "createdAt": "2026-07-03T03:06:59.979Z",
+      "source": "google-trends-2026-07"
     }
   ]
 }
