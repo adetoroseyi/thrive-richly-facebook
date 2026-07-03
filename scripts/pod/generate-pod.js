@@ -430,12 +430,14 @@ async function runRefresh() {
   for (const design of live) {
     console.log(`\n--- refreshing ${design.slug} ---`);
     const cache = {};
-    // 1) Update products that already exist.
+    // 1) Update products that already exist. If Printify rejects the in-place
+    // update (validation quirks, or the product was deleted from the dashboard),
+    // replace it: create fresh, publish, delete the old listing.
     for (const prod of design.products) {
       const p = byKey[prod.key];
       if (!p) { console.log(`  ${prod.key}: no config, skipped`); continue; }
+      const payload = await buildProductPayload(design, p, cache);
       try {
-        const payload = await buildProductPayload(design, p, cache);
         await printify('PUT', `/v1/shops/${shop.id}/products/${prod.productId}.json`, payload);
         await printify('POST', `/v1/shops/${shop.id}/products/${prod.productId}/publish.json`, {
           title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
@@ -443,7 +445,31 @@ async function runRefresh() {
         appendPodLog({ timestamp: new Date().toISOString(), slug: design.slug, product: prod.key, productId: prod.productId, status: 'refreshed' });
         console.log(`  ${prod.key}: refreshed`);
       } catch (err) {
-        console.error(`  ${prod.key}: refresh FAILED — ${err.message}`);
+        console.log(`  ${prod.key}: in-place update rejected (${err.status || '?'}) — replacing product`);
+        try {
+          const created = await printify('POST', `/v1/shops/${shop.id}/products.json`, {
+            title: prod.title || `${design.quote_lines.join(' ')} · ${p.label}`,
+            description: productDescription(design),
+            blueprint_id: p.blueprintId,
+            print_provider_id: p.providerId,
+            variants: payload.variants,
+            print_areas: payload.print_areas,
+            tags: ['personal finance', 'money', 'motivation', 'wealth', 'saving', 'investing'],
+          });
+          await printify('POST', `/v1/shops/${shop.id}/products/${created.id}/publish.json`, {
+            title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
+          });
+          try { await printify('DELETE', `/v1/shops/${shop.id}/products/${prod.productId}.json`); } catch { /* already gone */ }
+          const full = await printify('GET', `/v1/shops/${shop.id}/products/${created.id}.json`);
+          const mockup = (full.images || []).find(i => i.is_default) || (full.images || [])[0];
+          const oldId = prod.productId;
+          prod.productId = created.id;
+          prod.mockupUrl = mockup ? mockup.src : prod.mockupUrl;
+          appendPodLog({ timestamp: new Date().toISOString(), slug: design.slug, product: prod.key, productId: created.id, replacedProductId: oldId, mockupUrl: prod.mockupUrl, status: 'replaced' });
+          console.log(`  ${prod.key}: replaced (new product ${created.id}, old ${oldId} deleted)`);
+        } catch (err2) {
+          console.error(`  ${prod.key}: replace FAILED — ${err2.message}`);
+        }
       }
       await sleep(1500);
     }
