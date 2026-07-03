@@ -42,13 +42,13 @@ const PRODUCTS = [
   { key: 'mug', label: 'Mug 11oz', blueprintTitle: 'Mug 11oz', mode: 'contrast', darkColors: null, lightColors: /.*/, sizes: null, price: 1599 },  // white-only blueprint, variants carry no color option
   { key: 'tote', label: 'Tote Bag', blueprintTitle: 'Tote Bag', mode: 'contrast', darkColors: /black|navy/i, lightColors: /natural|white|oyster|light/i, sizes: null, price: 2199 },
   // Full-surface products — design on solid brand navy:
-  { key: 'poster', label: 'Poster 18x24', blueprintTitle: 'Matte Vertical Posters', mode: 'solid', sizes: /18.{0,3}x.{0,3}24/i, price: 2499 },
-  { key: 'canvas', label: 'Canvas 16x20', blueprintTitle: 'Matte Canvas, Stretched, 1.25"', mode: 'solid', sizes: /16.{0,3}x.{0,3}20/i, price: 4999 },
+  { key: 'poster', label: 'Poster 18x24', blueprintTitle: 'Matte Vertical Posters', mode: 'solid', sizes: /18.{0,3}[x×].{0,3}24/i, price: 2499 },
+  { key: 'canvas', label: 'Canvas 16x20', blueprintTitle: 'Matte Canvas, Stretched, 1.25"', mode: 'solid', sizes: /16.{0,3}[x×].{0,3}20/i, price: 4999 },
   { key: 'journal', label: 'Hardcover Journal', blueprintTitle: 'Hardcover Journal Matte', mode: 'solid', sizes: null, price: 1999 },
-  { key: 'stickers', label: 'Kiss-Cut Stickers', blueprintTitle: 'Kiss-Cut Stickers', mode: 'solid', badge: true, sizes: /3.{0,3}x.{0,3}3/i, price: 399 },
+  { key: 'stickers', label: 'Kiss-Cut Stickers', blueprintTitle: 'Kiss-Cut Stickers', mode: 'solid', badge: true, sizes: /3.{0,3}[x×].{0,3}3/i, price: 399 },
   { key: 'tumbler', label: 'Tumbler 20oz', blueprintTitle: 'Stainless Steel Tumbler 20oz', mode: 'solid', sizes: null, price: 2999 },
-  { key: 'pillow', label: 'Throw Pillow 18x18', blueprintTitle: 'Spun Polyester Square Pillow', mode: 'solid', sizes: /18.{0,3}x.{0,3}18/i, price: 2499 },
-  { key: 'blanket', label: 'Plush Blanket 50x60', blueprintTitle: 'Velveteen Plush Blanket', mode: 'solid', sizes: /50.{0,3}x.{0,3}60/i, price: 4499 },
+  { key: 'pillow', label: 'Throw Pillow 18x18', blueprintTitle: 'Spun Polyester Square Pillow', mode: 'solid', sizes: /18.{0,3}[x×].{0,3}18/i, price: 2499 },
+  { key: 'blanket', label: 'Plush Blanket 50x60', blueprintTitle: 'Velveteen Plush Blanket', mode: 'solid', sizes: /50.{0,3}[x×].{0,3}60/i, price: 4499 },
   { key: 'deskmat', label: 'Desk Mat', blueprintTitle: 'Desk Mat', mode: 'solid', sizes: null, price: 2199 },
   { key: 'phonecase', label: 'Phone Case', blueprintTitle: 'Tough Phone Cases', mode: 'solid', sizes: null, price: 2199 },
 ];
@@ -189,7 +189,9 @@ async function resolveProducts() {
   console.log('Resolving blueprints/providers/variants from the Printify catalog...');
   const blueprints = await printify('GET', '/v1/catalog/blueprints.json');
   const resolved = [];
+  const failures = [];
   for (const p of PRODUCTS) {
+    try {
     const wanted = p.blueprintTitle.toLowerCase();
     const bp = blueprints.find(b => (b.title || '').toLowerCase() === wanted)
       || blueprints.find(b => (b.title || '').toLowerCase().includes(wanted));
@@ -231,6 +233,13 @@ async function resolveProducts() {
       lightVariantIds: lightVariants.map(v => v.id),
     });
     console.log(`  ${p.key}: "${bp.title}" (bp ${bp.id}) via ${provider.title} (${provider.id}), ${darkVariants.length} dark + ${lightVariants.length} light variants, print ${ph.width}x${ph.height}@${ph.position}`);
+    } catch (err) {
+      failures.push(`${p.key}: ${err.message}`);
+      console.error(`  ${p.key}: RESOLUTION FAILED — ${err.message}`);
+    }
+  }
+  if (failures.length) {
+    throw new Error(`Catalog resolution failed for ${failures.length} product(s) — fix PRODUCTS config:\n${failures.join('\n')}`);
   }
   fs.writeFileSync(RESOLVED_FILE, JSON.stringify(resolved, null, 2) + '\n', 'utf8');
   return resolved;
