@@ -421,9 +421,37 @@ async function runPublish() {
 // PRODUCTS since the design first shipped.
 async function runRefresh() {
   const queue = loadQueue();
+  const shop = await getShop();
+
+  // 0) Sync with the dashboard — it is the source of truth for what is live.
+  // The user publishes/deletes from the Printify UI: deleted products are
+  // dropped here; a design with any visible product is treated as published.
+  console.log('Syncing queue with Printify dashboard state...');
+  for (const design of queue.designs.filter(d => d.products && d.products.length)) {
+    const kept = [];
+    let anyVisible = false;
+    for (const prod of design.products) {
+      try {
+        const full = await printify('GET', `/v1/shops/${shop.id}/products/${prod.productId}.json`);
+        if (full.visible) anyVisible = true;
+        kept.push(prod);
+      } catch (err) {
+        if (err.status === 404) { console.log(`  ${design.slug}/${prod.key}: deleted in dashboard — dropped from queue`); continue; }
+        kept.push(prod);   // transient error: keep and let the main loop deal with it
+      }
+      await sleep(300);
+    }
+    design.products = kept;
+    if (anyVisible && design.status !== 'published') {
+      design.status = 'published';
+      design.publishedAt = design.publishedAt || new Date().toISOString();
+      console.log(`  ${design.slug}: published from dashboard — status synced`);
+    }
+  }
+  saveQueue(queue);
+
   const live = queue.designs.filter(d => d.status === 'published' && d.products && d.products.length);
   if (!live.length) { console.log('No published designs to refresh.'); return; }
-  const shop = await getShop();
   const products = await resolveProducts();
   const byKey = Object.fromEntries(products.map(p => [p.key, p]));
   fs.mkdirSync(PRINT_DIR, { recursive: true });
