@@ -379,7 +379,24 @@
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f54e0d1119c3150ef09d/33719/6400/dollar-cost-averaging-into-my-feelings-mug-11oz.jpg?camera_label=front"
         }
       ],
-      "publishedAt": "2026-07-03T00:39:20.058Z"
+      "publishedAt": "2026-07-03T00:39:20.058Z",
+      "etsyProducts": [
+        {
+          "key": "tee",
+          "title": "Dollar Cost Averaging Into My Feelings, Funny Finance Shirt, Investor Gift, Buy The Dip, Stock Market Humor Gift | Premium Tee",
+          "productId": "6a471862c38c099cb90c93e2"
+        },
+        {
+          "key": "mug",
+          "title": "Dollar Cost Averaging Into My Feelings, Funny Finance Shirt, Investor Gift, Buy The Dip, Stock Market Humor Gift | Mug 11oz",
+          "productId": "6a4718698a4fd263a300c9d7"
+        },
+        {
+          "key": "stickers",
+          "title": "Dollar Cost Averaging Into My Feelings, Funny Finance Shirt, Investor Gift, Buy The Dip, Stock Market Humor Gift | Kiss-Cut Stickers",
+          "productId": "6a47186efd17053d220b0c47"
+        }
+      ]
     },
     {
       "slug": "total-return-on-being-hot",
@@ -419,7 +436,24 @@
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f566dde7ab98e5101a4a/33719/6400/compound-interest-is-my-love-language-mug-11oz.jpg?camera_label=front"
         }
       ],
-      "publishedAt": "2026-07-03T00:39:32.448Z"
+      "publishedAt": "2026-07-03T00:39:32.448Z",
+      "etsyProducts": [
+        {
+          "key": "tee",
+          "title": "Compound Interest Is My Love Language, Funny Finance Shirt, Investor Gift, Accountant Gift, Money Humor Tee | Premium Tee",
+          "productId": "6a471847c38c099cb90c93cd"
+        },
+        {
+          "key": "mug",
+          "title": "Compound Interest Is My Love Language, Funny Finance Shirt, Investor Gift, Accountant Gift, Money Humor Tee | Mug 11oz",
+          "productId": "6a47184ffd17053d220b0c38"
+        },
+        {
+          "key": "stickers",
+          "title": "Compound Interest Is My Love Language, Funny Finance Shirt, Investor Gift, Accountant Gift, Money Humor Tee | Kiss-Cut Stickers",
+          "productId": "6a47185449991797cf02c766"
+        }
+      ]
     },
     {
       "slug": "my-portfolio-is-boring-and-so-am-i",
@@ -459,7 +493,24 @@
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f580c38c099cb90c754d/33719/6400/my-portfolio-is-boring-and-so-am-i-mug-11oz.jpg?camera_label=front"
         }
       ],
-      "publishedAt": "2026-07-03T00:39:45.626Z"
+      "publishedAt": "2026-07-03T00:39:45.626Z",
+      "etsyProducts": [
+        {
+          "key": "tee",
+          "title": "Funny Finance Shirt, Boring Portfolio Investor Gift, Accountant Gift, Index Fund Humor Tee, Gift for Him Her, Money Nerd | Premium Tee",
+          "productId": "6a47182e7ade45f51207ed82"
+        },
+        {
+          "key": "mug",
+          "title": "Funny Finance Shirt, Boring Portfolio Investor Gift, Accountant Gift, Index Fund Humor Tee, Gift for Him Her, Money Nerd | Mug 11oz",
+          "productId": "6a471834fd17053d220b0c2a"
+        },
+        {
+          "key": "stickers",
+          "title": "Funny Finance Shirt, Boring Portfolio Investor Gift, Accountant Gift, Index Fund Humor Tee, Gift for Him Her, Money Nerd | Kiss-Cut Stickers",
+          "productId": "6a471838c38c099cb90c93bc"
+        }
+      ]
     },
     {
       "slug": "ask-me-about-my-expense-ratio",
@@ -499,7 +550,24 @@
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f597c38c099cb90c7559/33719/6400/ask-me-about-my-expense-ratio-mug-11oz.jpg?camera_label=front"
         }
       ],
-      "publishedAt": "2026-07-03T00:39:57.866Z"
+      "publishedAt": "2026-07-03T00:39:57.866Z",
+      "etsyProducts": [
+        {
+          "key": "tee",
+          "title": "Ask Me About My Expense Ratio Shirt, Funny Finance Gift, Investor Gift for Him Her, Accountant Gift, Personal Finance Nerd Tee | Premium Tee",
+          "productId": "6a471812c38c099cb90c934d"
+        },
+        {
+          "key": "mug",
+          "title": "Ask Me About My Expense Ratio Shirt, Funny Finance Gift, Investor Gift for Him Her, Accountant Gift, Personal Finance Nerd Tee | Mug 11oz",
+          "productId": "6a47181a7ade45f51207ed6a"
+        },
+        {
+          "key": "stickers",
+          "title": "Ask Me About My Expense Ratio Shirt, Funny Finance Gift, Investor Gift for Him Her, Accountant Gift, Personal Finance Nerd Tee | Kiss-Cut St",
+          "productId": "6a47181ebd32807aa50a0b6e"
+        }
+      ]
     }
   ]
 }
