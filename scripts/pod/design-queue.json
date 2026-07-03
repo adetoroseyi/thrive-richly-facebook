@@ -342,26 +342,29 @@
       "subline": "BUY THE DIP",
       "caption": "Hook: When the market drops, some people panic. We just call it a sale.\n\nDollar cost averaging isn't glamorous. You buy on the good days. You buy on the ugly days. You keep buying.\n\nThat's the whole trick.\n\nBoring beats brilliant when brilliant needs perfect timing.\n\nWhich one are you?\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": true,
-      "status": "mockups-ready",
+      "status": "published",
       "createdAt": "2026-07-02T19:54:17.903Z",
       "products": [
         {
           "key": "tee",
           "title": "Dollar cost averaging into my feelings · Premium Tee",
           "productId": "6a46f53a0d1119c3150ef094",
-          "mockupUrl": "https://images-api.printify.com/mockup/6a46f53a0d1119c3150ef094/79048/98445/dollar-cost-averaging-into-my-feelings-premium-tee.jpg?camera_label=front"
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46f53a0d1119c3150ef094/79048/98445/dollar-cost-averaging-into-my-feelings-premium-tee.jpg?camera_label=front",
+          "publishError": "Printify API error 429 on POST /v1/shops/28118771/products/6a46f53a0d1119c3150ef094/publish.json: {\"error\":\"Too Many Attempts.\",\"request_id\":\"1783039152@c07d8893-6b00-4bf9-ad89-3255a66c9fbc\"}"
         },
         {
           "key": "crewneck",
           "title": "Dollar cost averaging into my feelings · Crewneck Sweatshirt",
           "productId": "6a46f541d4a4c9161d09a7a9",
-          "mockupUrl": "https://images-api.printify.com/mockup/6a46f541d4a4c9161d09a7a9/25459/98502/dollar-cost-averaging-into-my-feelings-crewneck-sweatshirt.jpg?camera_label=front"
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46f541d4a4c9161d09a7a9/25459/98502/dollar-cost-averaging-into-my-feelings-crewneck-sweatshirt.jpg?camera_label=front",
+          "publishError": "Printify API error 429 on POST /v1/shops/28118771/products/6a46f541d4a4c9161d09a7a9/publish.json: {\"error\":\"Too Many Attempts.\",\"request_id\":\"1783039154@3d964779-60ec-4779-8dd0-e48cfd774b2e\"}"
         },
         {
           "key": "hoodie",
           "title": "Dollar cost averaging into my feelings · Hoodie",
           "productId": "6a46f5470d1119c3150ef09b",
-          "mockupUrl": "https://images-api.printify.com/mockup/6a46f5470d1119c3150ef09b/32920/98424/dollar-cost-averaging-into-my-feelings-hoodie.jpg?camera_label=front"
+          "mockupUrl": "https://images-api.printify.com/mockup/6a46f5470d1119c3150ef09b/32920/98424/dollar-cost-averaging-into-my-feelings-hoodie.jpg?camera_label=front",
+          "publishError": "Printify API error 429 on POST /v1/shops/28118771/products/6a46f5470d1119c3150ef09b/publish.json: {\"error\":\"Too Many Attempts.\",\"request_id\":\"1783039156@78dd606c-3777-4144-93f8-0cc4b1a86797\"}"
         },
         {
           "key": "mug",
@@ -369,7 +372,8 @@
           "productId": "6a46f54e0d1119c3150ef09d",
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f54e0d1119c3150ef09d/33719/6400/dollar-cost-averaging-into-my-feelings-mug-11oz.jpg?camera_label=front"
         }
-      ]
+      ],
+      "publishedAt": "2026-07-03T00:39:20.058Z"
     },
     {
       "slug": "total-return-on-being-hot",
@@ -381,7 +385,7 @@
       "subline": "",
       "caption": "Hook: Some people want flowers. I want reinvested dividends.\n\nThe romance of watching small deposits quietly grow over years? Underrated.\n\nSlow. Steady. A little unhinged about spreadsheets.\n\nThat's the vibe.\n\nGift it to the one who reads the fine print.\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": true,
-      "status": "mockups-ready",
+      "status": "published",
       "createdAt": "2026-07-02T19:54:17.933Z",
       "products": [
         {
@@ -408,7 +412,8 @@
           "productId": "6a46f566dde7ab98e5101a4a",
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f566dde7ab98e5101a4a/33719/6400/compound-interest-is-my-love-language-mug-11oz.jpg?camera_label=front"
         }
-      ]
+      ],
+      "publishedAt": "2026-07-03T00:39:32.448Z"
     },
     {
       "slug": "my-portfolio-is-boring-and-so-am-i",
@@ -420,7 +425,7 @@
       "subline": "NO NOTES",
       "caption": "Hook: No day trading. No hot tips. No crypto coin named after a dog.\n\nJust index funds and an early bedtime.\n\nThe most exciting thing my portfolio does is nothing, on purpose, for decades.\n\nBoring is a strategy.\n\nWhich one are you?\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": true,
-      "status": "mockups-ready",
+      "status": "published",
       "createdAt": "2026-07-02T19:54:17.966Z",
       "products": [
         {
@@ -447,7 +452,8 @@
           "productId": "6a46f580c38c099cb90c754d",
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f580c38c099cb90c754d/33719/6400/my-portfolio-is-boring-and-so-am-i-mug-11oz.jpg?camera_label=front"
         }
-      ]
+      ],
+      "publishedAt": "2026-07-03T00:39:45.626Z"
     },
     {
       "slug": "ask-me-about-my-expense-ratio",
@@ -459,7 +465,7 @@
       "subline": "WARNING: I WILL",
       "caption": "Hook: Bring it up. I dare you.\n\nI have opinions about fees. Strong ones. The kind that clear a dinner party.\n\nA fund that quietly skims a percent a year isn't free. It's expensive in slow motion.\n\nLow costs. Long game.\n\nDo you know yours?\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": true,
-      "status": "mockups-ready",
+      "status": "published",
       "createdAt": "2026-07-02T19:54:17.997Z",
       "products": [
         {
@@ -486,7 +492,8 @@
           "productId": "6a46f597c38c099cb90c7559",
           "mockupUrl": "https://images-api.printify.com/mockup/6a46f597c38c099cb90c7559/33719/6400/ask-me-about-my-expense-ratio-mug-11oz.jpg?camera_label=front"
         }
-      ]
+      ],
+      "publishedAt": "2026-07-03T00:39:57.866Z"
     }
   ]
 }
