@@ -46,7 +46,7 @@ const PRODUCTS = [
   { key: 'canvas', label: 'Canvas 16x20', blueprintTitle: 'Matte Canvas, Stretched, 1.25"', mode: 'solid', sizes: /16.{0,3}[x×].{0,3}20/i, price: 4999 },
   { key: 'journal', label: 'Hardcover Journal', blueprintTitle: 'Hardcover Journal Matte', mode: 'solid', sizes: null, price: 1999 },
   { key: 'stickers', label: 'Kiss-Cut Stickers', blueprintTitle: 'Kiss-Cut Stickers', mode: 'solid', badge: true, sizes: /3.{0,3}[x×].{0,3}3/i, price: 399 },
-  { key: 'tumbler', label: 'Tumbler 20oz', blueprintTitle: 'Stainless Steel Tumbler 20oz', mode: 'solid', sizes: null, price: 2999 },
+  { key: 'tumbler', label: 'Tumbler 20oz', blueprintTitle: 'Tumbler 20oz', mode: 'solid', sizes: null, price: 2999 },
   { key: 'pillow', label: 'Throw Pillow 18x18', blueprintTitle: 'Spun Polyester Square Pillow', mode: 'solid', sizes: /18.{0,3}[x×].{0,3}18/i, price: 2499 },
   { key: 'blanket', label: 'Plush Blanket 50x60', blueprintTitle: 'Velveteen Plush Blanket', mode: 'solid', sizes: /50.{0,3}[x×].{0,3}60/i, price: 4499 },
   { key: 'deskmat', label: 'Desk Mat', blueprintTitle: 'Desk Mat', mode: 'solid', sizes: null, price: 2199 },
