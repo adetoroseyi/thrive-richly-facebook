@@ -74,6 +74,17 @@ async function getShop() {
   return popup || shops[0];
 }
 
+// Returns the shop whose sales channel matches (e.g. /etsy/i). Fails loudly with
+// the available channels so a missing connection is obvious.
+async function getShopByChannel(re) {
+  const shops = await api('GET', '/v1/shops.json');
+  const hit = (shops || []).find(s => re.test(s.sales_channel || '') || re.test(s.title || ''));
+  if (!hit) {
+    throw new Error(`No shop matching ${re} found. Connected shops: ${(shops || []).map(s => `"${s.title}" (${s.sales_channel})`).join(', ')}`);
+  }
+  return hit;
+}
+
 async function main() {
   const cmd = process.argv[2];
   if (cmd === 'check') {
@@ -90,4 +101,4 @@ if (require.main === module) {
   main().catch(e => { console.error(e.message || e); process.exit(1); });
 }
 
-module.exports = { api, loadToken, getShop };
+module.exports = { api, loadToken, getShop, getShopByChannel };

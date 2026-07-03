@@ -19,8 +19,9 @@
 
 const fs = require('fs');
 const path = require('path');
-const { api: printify, getShop } = require('./printify.js');
+const { api: printify, getShop, getShopByChannel } = require('./printify.js');
 const { renderPrintFile, renderPreview } = require('./render-design.js');
+const { claudeDraftDesigns, claudeEtsySeo } = require('./claude-copy.js');
 
 const REPO = path.join(__dirname, '..', '..');
 const QUEUE_FILE = path.join(__dirname, 'design-queue.json');
@@ -60,19 +61,6 @@ function arg(flag, fallback) {
   return i > -1 ? process.argv[i + 1] : fallback;
 }
 
-function loadKey(name) {
-  if (process.env[name] && process.env[name].trim()) return process.env[name].trim();
-  for (const file of [path.join(REPO, '.env'), path.join(REPO, '..', '.env')]) {
-    if (!fs.existsSync(file)) continue;
-    for (const line of fs.readFileSync(file, 'utf8').split(/\r?\n/)) {
-      const m = line.match(new RegExp(`^\\s*${name}\\s*=\\s*(.+)\\s*$`));
-      if (m && m[1].trim()) return m[1].trim().replace(/^["']|["']$/g, '');
-    }
-  }
-  console.error(`${name} is not set. Add it to your environment or .env (do not paste it into chat), then re-run.`);
-  process.exit(1);
-}
-
 function loadQueue() {
   return JSON.parse(fs.readFileSync(QUEUE_FILE, 'utf8'));
 }
@@ -86,70 +74,11 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 // ---------- draft mode ----------
 
-const DESIGNS_SCHEMA = {
-  type: 'object',
-  properties: {
-    designs: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          slug: { type: 'string', description: 'kebab-case id, e.g. "pay-yourself-first"' },
-          quote_lines: {
-            type: 'array',
-            items: { type: 'string', description: 'One short line, MAX 22 characters' },
-            description: 'The design text, split into 1-3 short lines (never more than 3) of max 22 chars each',
-          },
-          subline: { type: 'string', description: 'Small accent line under the quote (max 36 chars), or empty string' },
-          caption: { type: 'string', description: 'Social caption for promoting this product later' },
-        },
-        required: ['slug', 'quote_lines', 'subline', 'caption'],
-        additionalProperties: false,
-      },
-    },
-  },
-  required: ['designs'],
-  additionalProperties: false,
-};
-
-async function claudeDraftDesigns(count) {
-  const key = loadKey('ANTHROPIC_API_KEY');
-  const brandVoice = fs.readFileSync(path.join(REPO, 'brand-voice.md'), 'utf8');
+async function runDraft(count) {
   const existing = fs.existsSync(QUEUE_FILE)
     ? loadQueue().designs.map(d => d.quote_lines.join(' '))
     : [];
-
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
-    body: JSON.stringify({
-      model: 'claude-opus-4-8',
-      max_tokens: 8000,
-      thinking: { type: 'adaptive' },
-      output_config: { format: { type: 'json_schema', schema: DESIGNS_SCHEMA } },
-      system: `You write original typography designs for Thrive Richly merch (shirts, hoodies, mugs). Follow this brand voice document, especially its Red lines:\n\n${brandVoice}`,
-      messages: [{
-        role: 'user',
-        content: `Write exactly ${count} merch designs. What SELLS in text merch (in priority order — mix the batch across these):
-1. INSIDER HUMOR for the boring-investing tribe — inside jokes only index-fund/FIRE people get. The wearer signals "I'm one of us" with a smirk.
-2. MONEY PUNS & WORDPLAY — genuinely clever puns sell year after year. Must land on first read.
-3. ANTI-HUSTLE SARCASM — dry humor puncturing get-rich-quick culture ("my portfolio is boring and so am I" energy).
-4. GIFTABLE WHOLESOME — something you'd gift a spouse/dad/friend who's good with money.
-NEVER: earnest aspirational statements (they read as trying and do not sell), advice sentences, motivational-poster energy.
-Rules: every line is YOUR original phrasing — never a quote by a famous person, never an attribution. Funny beats profound. No income claims, no specific dollar amounts, no emoji, no hashtags in quote_lines. quote_lines: 1-3 lines, max 22 characters per line, punchy. subline: optional tiny accent (e.g. "THRIVE RICHLY" or a dry 2-4 word punchline), or "". Avoid these existing designs: ${JSON.stringify(existing)}`,
-      }],
-    }),
-  });
-  const json = await res.json();
-  if (!res.ok) throw new Error(`Claude API error ${res.status}: ${JSON.stringify(json)}`);
-  if (json.stop_reason === 'refusal') throw new Error('Claude declined the drafting request (stop_reason: refusal).');
-  const text = json.content.find(b => b.type === 'text');
-  if (!text) throw new Error('No text block in Claude response.');
-  return JSON.parse(text.text).designs;
-}
-
-async function runDraft(count) {
-  const designs = await claudeDraftDesigns(count);
+  const designs = await claudeDraftDesigns(count, existing);
   fs.mkdirSync(PREVIEW_DIR, { recursive: true });
   const queue = loadQueue();
   for (const d of designs) {
@@ -534,6 +463,61 @@ async function runRefresh() {
   console.log('\nRefresh complete.');
 }
 
+// ---------- etsy mode: curated hero batch as DRAFTS in the Etsy-connected shop ----------
+// Etsy is a search engine: listings get Claude-drafted SEO titles/descriptions/tags.
+// Products are created as drafts (no listing fee, invisible); the user reviews and
+// batch-publishes from the Printify dashboard — same convention as the Pop-Up store.
+
+const ETSY_PRODUCT_KEYS = ['tee', 'mug', 'stickers'];
+const ETSY_MAX_DESIGNS = 4;
+
+async function runEtsy() {
+  const queue = loadQueue();
+  const published = queue.designs.filter(d => d.status === 'published');
+  if (!published.length) throw new Error('No published designs to list on Etsy.');
+  const flagged = published.filter(d => d.featured === true);
+  const designs = (flagged.length ? flagged : published)
+    .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')))
+    .slice(0, ETSY_MAX_DESIGNS);
+
+  const shop = await getShopByChannel(/etsy/i);
+  console.log(`Creating Etsy DRAFT listings in "${shop.title}" (id ${shop.id}, channel ${shop.sales_channel}).`);
+  const products = (await resolveProducts()).filter(p => ETSY_PRODUCT_KEYS.includes(p.key));
+  fs.mkdirSync(PRINT_DIR, { recursive: true });
+
+  for (const design of designs) {
+    console.log(`\n--- ${design.slug} ---`);
+    design.etsyProducts = design.etsyProducts || [];
+    try {
+      const seo = await claudeEtsySeo(design);
+      const tags = [...new Set(seo.tags.map(t => t.trim().toLowerCase().slice(0, 20)).filter(Boolean))].slice(0, 13);
+      const cache = {};
+      for (const p of products) {
+        if (design.etsyProducts.some(e => e.key === p.key)) { console.log(`  ${p.key}: already exists, skipped`); continue; }
+        const title = `${seo.title} | ${p.label}`.slice(0, 140);
+        const payload = await buildProductPayload(design, p, cache);
+        const created = await printify('POST', `/v1/shops/${shop.id}/products.json`, {
+          title,
+          description: seo.description,
+          blueprint_id: p.blueprintId,
+          print_provider_id: p.providerId,
+          variants: payload.variants,
+          print_areas: payload.print_areas,
+          tags,
+        });
+        design.etsyProducts.push({ key: p.key, title, productId: created.id });
+        appendPodLog({ timestamp: new Date().toISOString(), shop: 'etsy', slug: design.slug, product: p.key, title, productId: created.id, price: p.price, status: 'etsy-draft' });
+        console.log(`  ${p.key}: Etsy draft created (${created.id})`);
+        await sleep(1500);
+      }
+    } catch (err) {
+      console.error(`  FAILED: ${err.message}`);
+    }
+    saveQueue(queue);
+  }
+  console.log('\nDone. Review the drafts in the Printify dashboard (Etsy store) and batch-publish the keepers — each published listing costs Etsy\'s $0.20 fee.');
+}
+
 async function main() {
   const mode = arg('--mode', 'draft');
   const count = parseInt(arg('--count', '4'), 10);
@@ -541,7 +525,8 @@ async function main() {
   if (mode === 'mockups') return runMockups();
   if (mode === 'publish') return runPublish();
   if (mode === 'refresh') return runRefresh();
-  throw new Error(`Unknown mode "${mode}" (use draft, mockups, publish, or refresh).`);
+  if (mode === 'etsy') return runEtsy();
+  throw new Error(`Unknown mode "${mode}" (use draft, mockups, publish, refresh, or etsy).`);
 }
 
 main().catch(e => { console.error(e.message || e); process.exit(1); });

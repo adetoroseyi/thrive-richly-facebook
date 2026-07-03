@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'draft = generate designs + previews; mockups = hidden draft products + mockups; publish = make approved designs live; refresh = re-apply colors/designs to live products'
+        description: 'draft = designs + previews; mockups = hidden drafts + mockups; publish = approved designs live; refresh = sync + re-apply to live products; etsy = SEO draft listings in the Etsy shop'
         type: choice
-        options: [draft, mockups, publish, refresh]
+        options: [draft, mockups, publish, refresh, etsy]
         default: draft
       count:
         description: 'How many designs to draft (draft mode only)'
