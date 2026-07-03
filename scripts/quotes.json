@@ -4627,7 +4627,9 @@
       "author": "Maya Angelou",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-06-03"
+      "postedAt": "2026-06-03",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-03"
     },
     {
       "id": 513,
@@ -4636,7 +4638,9 @@
       "author": "Wayne Dyer",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-06-04"
+      "postedAt": "2026-06-04",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-03"
     },
     {
       "id": 514,
@@ -4645,7 +4649,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-06-04"
+      "postedAt": "2026-06-04",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-03"
     },
     {
       "id": 515,
