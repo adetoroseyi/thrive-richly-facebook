@@ -4600,7 +4600,9 @@
       "author": "Stephen Covey",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-06-03"
+      "postedAt": "2026-06-03",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-04"
     },
     {
       "id": 510,
@@ -4609,7 +4611,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-06-03"
+      "postedAt": "2026-06-03",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-04"
     },
     {
       "id": 511,
@@ -4618,7 +4622,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-06-03"
+      "postedAt": "2026-06-03",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-04"
     },
     {
       "id": 512,
