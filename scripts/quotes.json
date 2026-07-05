@@ -4573,7 +4573,9 @@
       "author": "Tony Robbins",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-06-02"
+      "postedAt": "2026-06-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-05"
     },
     {
       "id": 507,
@@ -4582,7 +4584,9 @@
       "author": "Conor McGregor",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-06-02"
+      "postedAt": "2026-06-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-05"
     },
     {
       "id": 508,
@@ -4591,7 +4595,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-06-03"
+      "postedAt": "2026-06-03",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-05"
     },
     {
       "id": 509,
