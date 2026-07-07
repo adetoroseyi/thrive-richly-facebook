@@ -4528,7 +4528,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-06-01"
+      "postedAt": "2026-06-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-07"
     },
     {
       "id": 502,
@@ -4537,7 +4539,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-06-01"
+      "postedAt": "2026-06-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-07"
     },
     {
       "id": 503,
@@ -4557,7 +4561,9 @@
       "author": "Tony Robbins",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-06-02"
+      "postedAt": "2026-06-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-07"
     },
     {
       "id": 505,
