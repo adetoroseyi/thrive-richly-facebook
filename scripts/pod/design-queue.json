@@ -980,8 +980,94 @@
       "subline": "THRIVE RICHLY",
       "caption": "The whole personality in one fund.\n\nNo tickers to memorize. No charts to babysit.\n\nJust the entire market, quietly doing its thing while you live your life.\n\nBoring? Historically, boring has treated people pretty well.\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:18.887Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:18.887Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "VTSAX and chill · Premium Tee",
+          "productId": "6a4d2a3d08ac98149a0f1e8a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a3d08ac98149a0f1e8a/73207/98445/vtsax-and-chill-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "VTSAX and chill · Crewneck Sweatshirt",
+          "productId": "6a4d2a4931dd67d10c02d10b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a4931dd67d10c02d10b/25458/98502/vtsax-and-chill-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "VTSAX and chill · Hoodie",
+          "productId": "6a4d2a506d9506153303eda2",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a506d9506153303eda2/32912/98424/vtsax-and-chill-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "VTSAX and chill · Mug 11oz",
+          "productId": "6a4d2a5831dd67d10c02d116",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a5831dd67d10c02d116/33719/6400/vtsax-and-chill-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "VTSAX and chill · Tote Bag",
+          "productId": "6a4d2a5e8dcf675a640bcb9a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a5e8dcf675a640bcb9a/80815/109687/vtsax-and-chill-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "VTSAX and chill · Poster 18x24",
+          "productId": "6a4d2a658dcf675a640bcb9f",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a658dcf675a640bcb9f/43144/94696/vtsax-and-chill-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "VTSAX and chill · Canvas 16x20",
+          "productId": "6a4d2a6bfd0a31095806b6d2",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a6bfd0a31095806b6d2/91646/60171/vtsax-and-chill-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "VTSAX and chill · Hardcover Journal",
+          "productId": "6a4d2a7131f70fa8db0e970d",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a7131f70fa8db0e970d/65223/7338/vtsax-and-chill-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "VTSAX and chill · Kiss-Cut Stickers",
+          "productId": "6a4d2a74fd0a31095806b6db",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a74fd0a31095806b6db/45750/16655/vtsax-and-chill-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "VTSAX and chill · Tumbler 20oz",
+          "productId": "6a4d2a7b24e00bb78909549c",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a7b24e00bb78909549c/44519/849/vtsax-and-chill-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "VTSAX and chill · Throw Pillow 18x18",
+          "productId": "6a4d2a818dcf675a640bcbb9",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a818dcf675a640bcbb9/41527/47615/vtsax-and-chill-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "VTSAX and chill · Plush Blanket 50x60",
+          "productId": "6a4d2a8a9c63a05dbf0eef9a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a8a9c63a05dbf0eef9a/68323/9076/vtsax-and-chill-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "VTSAX and chill · Desk Mat",
+          "productId": "6a4d2a9031dd67d10c02d13b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a9031dd67d10c02d13b/65240/6570/vtsax-and-chill-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "VTSAX and chill · Phone Case",
+          "productId": "6a4d2a9431f70fa8db0e9726",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a9431f70fa8db0e9726/62582/97458/vtsax-and-chill-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "buy-the-whole-haystack",
@@ -992,8 +1078,94 @@
       "subline": "skip the needle",
       "caption": "Everyone wants to find the one perfect stock.\n\nThe needle in the haystack.\n\nYou? You bought the haystack.\n\nOne less thing to be wrong about.\n\n#personalfinance #moneymindset #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:18.935Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:18.935Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Buy the whole haystack · Premium Tee",
+          "productId": "6a4d2a9c6d9506153303edd0",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2a9c6d9506153303edd0/73207/98445/buy-the-whole-haystack-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Buy the whole haystack · Crewneck Sweatshirt",
+          "productId": "6a4d2aa508ac98149a0f1eda",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2aa508ac98149a0f1eda/25458/98502/buy-the-whole-haystack-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Buy the whole haystack · Hoodie",
+          "productId": "6a4d2aac31f70fa8db0e973e",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2aac31f70fa8db0e973e/32912/98424/buy-the-whole-haystack-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Buy the whole haystack · Mug 11oz",
+          "productId": "6a4d2ab48dcf675a640bcbd5",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ab48dcf675a640bcbd5/33719/6400/buy-the-whole-haystack-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "Buy the whole haystack · Tote Bag",
+          "productId": "6a4d2ab94226e32f9d05ac65",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ab94226e32f9d05ac65/80815/109687/buy-the-whole-haystack-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "Buy the whole haystack · Poster 18x24",
+          "productId": "6a4d2abf8dcf675a640bcbea",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2abf8dcf675a640bcbea/43144/94696/buy-the-whole-haystack-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "Buy the whole haystack · Canvas 16x20",
+          "productId": "6a4d2ac7436da7f080041928",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ac7436da7f080041928/91646/60171/buy-the-whole-haystack-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "Buy the whole haystack · Hardcover Journal",
+          "productId": "6a4d2acd24e00bb789095504",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2acd24e00bb789095504/65223/7338/buy-the-whole-haystack-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "Buy the whole haystack · Kiss-Cut Stickers",
+          "productId": "6a4d2ad1fd0a31095806b716",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ad1fd0a31095806b716/45750/16655/buy-the-whole-haystack-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "Buy the whole haystack · Tumbler 20oz",
+          "productId": "6a4d2ad7fd0a31095806b719",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ad7fd0a31095806b719/44519/849/buy-the-whole-haystack-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "Buy the whole haystack · Throw Pillow 18x18",
+          "productId": "6a4d2adcf124a73e1a078392",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2adcf124a73e1a078392/41527/47615/buy-the-whole-haystack-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "Buy the whole haystack · Plush Blanket 50x60",
+          "productId": "6a4d2ae3f124a73e1a0783a2",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ae3f124a73e1a0783a2/68323/9076/buy-the-whole-haystack-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "Buy the whole haystack · Desk Mat",
+          "productId": "6a4d2aeafd0a31095806b72e",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2aeafd0a31095806b72e/65240/6570/buy-the-whole-haystack-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "Buy the whole haystack · Phone Case",
+          "productId": "6a4d2aef24e00bb78909551f",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2aef24e00bb78909551f/62582/97458/buy-the-whole-haystack-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "get-rich-slow",
@@ -1003,8 +1175,94 @@
       "subline": "extremely slowly",
       "caption": "The least sexy plan in the room.\n\nNo launch. No hustle. No secret.\n\nJust the same boring moves on repeat for a long, long time.\n\nTurns out slow is a strategy.\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:18.980Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:18.980Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Get rich slow · Premium Tee",
+          "productId": "6a4d2afaf124a73e1a0783e3",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2afaf124a73e1a0783e3/73207/98445/get-rich-slow-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Get rich slow · Crewneck Sweatshirt",
+          "productId": "6a4d2b0324e00bb789095546",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b0324e00bb789095546/25458/98502/get-rich-slow-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Get rich slow · Hoodie",
+          "productId": "6a4d2b0af124a73e1a0783f0",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b0af124a73e1a0783f0/32912/98424/get-rich-slow-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Get rich slow · Mug 11oz",
+          "productId": "6a4d2b116d9506153303ee26",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b116d9506153303ee26/33719/6400/get-rich-slow-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "Get rich slow · Tote Bag",
+          "productId": "6a4d2b1608ac98149a0f1f69",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b1608ac98149a0f1f69/80815/109687/get-rich-slow-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "Get rich slow · Poster 18x24",
+          "productId": "6a4d2b1cf124a73e1a0783fa",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b1cf124a73e1a0783fa/43144/94696/get-rich-slow-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "Get rich slow · Canvas 16x20",
+          "productId": "6a4d2b21436da7f08004199c",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b21436da7f08004199c/91646/60171/get-rich-slow-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "Get rich slow · Hardcover Journal",
+          "productId": "6a4d2b276d9506153303ee42",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b276d9506153303ee42/65223/7338/get-rich-slow-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "Get rich slow · Kiss-Cut Stickers",
+          "productId": "6a4d2b2bfd0a31095806b75a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b2bfd0a31095806b75a/45750/16655/get-rich-slow-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "Get rich slow · Tumbler 20oz",
+          "productId": "6a4d2b31436da7f0800419ac",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b31436da7f0800419ac/44519/849/get-rich-slow-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "Get rich slow · Throw Pillow 18x18",
+          "productId": "6a4d2b3624e00bb78909556a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b3624e00bb78909556a/41527/47615/get-rich-slow-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "Get rich slow · Plush Blanket 50x60",
+          "productId": "6a4d2b45436da7f0800419ce",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b45436da7f0800419ce/68323/9076/get-rich-slow-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "Get rich slow · Desk Mat",
+          "productId": "6a4d2b5131f70fa8db0e9825",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b5131f70fa8db0e9825/65240/6570/get-rich-slow-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "Get rich slow · Phone Case",
+          "productId": "6a4d2b5824e00bb7890955a0",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b5824e00bb7890955a0/62582/97458/get-rich-slow-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "making-cents-of-it-all",
@@ -1015,8 +1273,94 @@
       "subline": "",
       "caption": "For the friend who reads the fine print for fun.\n\nBudgets. Spreadsheets. That little spark when the numbers line up.\n\nSome people make sense of the world.\n\nYou make cents of it.\n\n#personalfinance #moneymindset",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:19.028Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:19.028Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Making cents of it all · Premium Tee",
+          "productId": "6a4d2b6324e00bb7890955a8",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b6324e00bb7890955a8/73207/98445/making-cents-of-it-all-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Making cents of it all · Crewneck Sweatshirt",
+          "productId": "6a4d2b7224e00bb7890955b4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b7224e00bb7890955b4/25458/98502/making-cents-of-it-all-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Making cents of it all · Hoodie",
+          "productId": "6a4d2b7a08ac98149a0f1fde",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b7a08ac98149a0f1fde/32912/98424/making-cents-of-it-all-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Making cents of it all · Mug 11oz",
+          "productId": "6a4d2b8131f70fa8db0e985b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b8131f70fa8db0e985b/33719/6400/making-cents-of-it-all-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "Making cents of it all · Tote Bag",
+          "productId": "6a4d2b856d9506153303eeb9",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b856d9506153303eeb9/80815/109687/making-cents-of-it-all-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "Making cents of it all · Poster 18x24",
+          "productId": "6a4d2b8bfd0a31095806b7d4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b8bfd0a31095806b7d4/43144/94696/making-cents-of-it-all-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "Making cents of it all · Canvas 16x20",
+          "productId": "6a4d2b9208ac98149a0f1fef",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b9208ac98149a0f1fef/91646/60171/making-cents-of-it-all-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "Making cents of it all · Hardcover Journal",
+          "productId": "6a4d2b9c31f70fa8db0e9879",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2b9c31f70fa8db0e9879/65223/7338/making-cents-of-it-all-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "Making cents of it all · Kiss-Cut Stickers",
+          "productId": "6a4d2ba0436da7f080041a31",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ba0436da7f080041a31/45750/16655/making-cents-of-it-all-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "Making cents of it all · Tumbler 20oz",
+          "productId": "6a4d2ba924e00bb7890955e8",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ba924e00bb7890955e8/44519/849/making-cents-of-it-all-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "Making cents of it all · Throw Pillow 18x18",
+          "productId": "6a4d2bae6d9506153303eee3",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bae6d9506153303eee3/41527/47615/making-cents-of-it-all-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "Making cents of it all · Plush Blanket 50x60",
+          "productId": "6a4d2bb424e00bb7890955ef",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bb424e00bb7890955ef/68323/9076/making-cents-of-it-all-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "Making cents of it all · Desk Mat",
+          "productId": "6a4d2bbb31f70fa8db0e989f",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bbb31f70fa8db0e989f/65240/6570/making-cents-of-it-all-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "Making cents of it all · Phone Case",
+          "productId": "6a4d2bc2f124a73e1a0784a0",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bc2f124a73e1a0784a0/62582/97458/making-cents-of-it-all-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "compound-and-prosper",
@@ -1027,8 +1371,94 @@
       "subline": "",
       "caption": "Live long and let interest do its thing.\n\nThe boring magic where money quietly makes more money while you sleep.\n\nNo cape required.\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:19.078Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:19.078Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Compound and prosper · Premium Tee",
+          "productId": "6a4d2bcc6d9506153303eef8",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bcc6d9506153303eef8/73207/98445/compound-and-prosper-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Compound and prosper · Crewneck Sweatshirt",
+          "productId": "6a4d2bda31f70fa8db0e98b4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bda31f70fa8db0e98b4/25458/98502/compound-and-prosper-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Compound and prosper · Hoodie",
+          "productId": "6a4d2be431f70fa8db0e98bf",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2be431f70fa8db0e98bf/32912/98424/compound-and-prosper-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Compound and prosper · Mug 11oz",
+          "productId": "6a4d2bedad2185ed040117c1",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bedad2185ed040117c1/33719/6400/compound-and-prosper-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "Compound and prosper · Tote Bag",
+          "productId": "6a4d2bf7f124a73e1a078512",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bf7f124a73e1a078512/80815/109687/compound-and-prosper-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "Compound and prosper · Poster 18x24",
+          "productId": "6a4d2bff436da7f080041adc",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2bff436da7f080041adc/43144/94696/compound-and-prosper-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "Compound and prosper · Canvas 16x20",
+          "productId": "6a4d2c09fd0a31095806b896",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c09fd0a31095806b896/91646/60171/compound-and-prosper-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "Compound and prosper · Hardcover Journal",
+          "productId": "6a4d2c14f124a73e1a07854e",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c14f124a73e1a07854e/65223/7338/compound-and-prosper-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "Compound and prosper · Kiss-Cut Stickers",
+          "productId": "6a4d2c1b436da7f080041b0b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c1b436da7f080041b0b/45750/16655/compound-and-prosper-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "Compound and prosper · Tumbler 20oz",
+          "productId": "6a4d2c27ad2185ed0401185f",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c27ad2185ed0401185f/44519/849/compound-and-prosper-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "Compound and prosper · Throw Pillow 18x18",
+          "productId": "6a4d2c2c3104c4a72002ad0b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c2c3104c4a72002ad0b/41527/47615/compound-and-prosper-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "Compound and prosper · Plush Blanket 50x60",
+          "productId": "6a4d2c383104c4a72002ad39",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c383104c4a72002ad39/68323/9076/compound-and-prosper-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "Compound and prosper · Desk Mat",
+          "productId": "6a4d2c3dd91be63e94076494",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c3dd91be63e94076494/65240/6570/compound-and-prosper-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "Compound and prosper · Phone Case",
+          "productId": "6a4d2c42ad2185ed04011890",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c42ad2185ed04011890/62582/97458/compound-and-prosper-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "fund-and-games",
@@ -1039,8 +1469,94 @@
       "subline": "until you retire early",
       "caption": "Low fees. Broad exposure. Zero drama.\n\nSome people call it dull.\n\nYou call it fund and games.\n\n#personalfinance #moneymindset #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:19.123Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:19.123Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "It's all fund and games · Premium Tee",
+          "productId": "6a4d2c4a31f70fa8db0e99ad",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c4a31f70fa8db0e99ad/73207/98445/its-all-fund-and-games-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "It's all fund and games · Crewneck Sweatshirt",
+          "productId": "6a4d2c536d9506153303f018",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c536d9506153303f018/25458/98502/its-all-fund-and-games-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "It's all fund and games · Hoodie",
+          "productId": "6a4d2c5bf124a73e1a0785bf",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c5bf124a73e1a0785bf/32912/98424/its-all-fund-and-games-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "It's all fund and games · Mug 11oz",
+          "productId": "6a4d2c6231f70fa8db0e99be",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c6231f70fa8db0e99be/33719/6400/its-all-fund-and-games-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "It's all fund and games · Tote Bag",
+          "productId": "6a4d2c67436da7f080041b68",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c67436da7f080041b68/80815/109687/its-all-fund-and-games-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "It's all fund and games · Poster 18x24",
+          "productId": "6a4d2c6e436da7f080041b6a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c6e436da7f080041b6a/43144/94696/its-all-fund-and-games-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "It's all fund and games · Canvas 16x20",
+          "productId": "6a4d2c746d9506153303f024",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c746d9506153303f024/91646/60171/its-all-fund-and-games-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "It's all fund and games · Hardcover Journal",
+          "productId": "6a4d2c7a792210fee90607c8",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c7a792210fee90607c8/65223/7338/its-all-fund-and-games-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "It's all fund and games · Kiss-Cut Stickers",
+          "productId": "6a4d2c7e3104c4a72002ad77",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c7e3104c4a72002ad77/45750/16655/its-all-fund-and-games-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "It's all fund and games · Tumbler 20oz",
+          "productId": "6a4d2c84436da7f080041b6d",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c84436da7f080041b6d/44519/849/its-all-fund-and-games-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "It's all fund and games · Throw Pillow 18x18",
+          "productId": "6a4d2c893104c4a72002ad86",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c893104c4a72002ad86/41527/47615/its-all-fund-and-games-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "It's all fund and games · Plush Blanket 50x60",
+          "productId": "6a4d2c93d91be63e940764f1",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c93d91be63e940764f1/68323/9076/its-all-fund-and-games-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "It's all fund and games · Desk Mat",
+          "productId": "6a4d2c9b792210fee90607e5",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2c9b792210fee90607e5/65240/6570/its-all-fund-and-games-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "It's all fund and games · Phone Case",
+          "productId": "6a4d2ca03104c4a72002adb7",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ca03104c4a72002adb7/62582/97458/its-all-fund-and-games-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "i-have-a-spreadsheet",
@@ -1052,8 +1568,94 @@
       "subline": "",
       "caption": "Someone pitched you a can't-miss opportunity again.\n\nYou already have a system.\n\nIt lives in a spreadsheet. It's very boring. It works.\n\nHard pass, thanks.\n\n#moneymindset #personalfinance",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:19.170Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:19.170Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "No thanks I have a spreadsheet · Premium Tee",
+          "productId": "6a4d2ca7d91be63e94076503",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ca7d91be63e94076503/73207/98445/no-thanks-i-have-a-spreadsheet-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "No thanks I have a spreadsheet · Crewneck Sweatshirt",
+          "productId": "6a4d2cb1ad2185ed040118e9",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cb1ad2185ed040118e9/25458/98502/no-thanks-i-have-a-spreadsheet-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "No thanks I have a spreadsheet · Hoodie",
+          "productId": "6a4d2cba6d9506153303f057",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cba6d9506153303f057/32912/98424/no-thanks-i-have-a-spreadsheet-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "No thanks I have a spreadsheet · Mug 11oz",
+          "productId": "6a4d2cc4436da7f080041ba4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cc4436da7f080041ba4/33719/6400/no-thanks-i-have-a-spreadsheet-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "No thanks I have a spreadsheet · Tote Bag",
+          "productId": "6a4d2cc9792210fee9060815",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cc9792210fee9060815/80815/109687/no-thanks-i-have-a-spreadsheet-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "No thanks I have a spreadsheet · Poster 18x24",
+          "productId": "6a4d2cd0ad2185ed040118fc",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cd0ad2185ed040118fc/43144/94696/no-thanks-i-have-a-spreadsheet-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "No thanks I have a spreadsheet · Canvas 16x20",
+          "productId": "6a4d2cd63104c4a72002addd",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cd63104c4a72002addd/91646/60171/no-thanks-i-have-a-spreadsheet-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "No thanks I have a spreadsheet · Hardcover Journal",
+          "productId": "6a4d2cdb24e00bb789095739",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cdb24e00bb789095739/65223/7338/no-thanks-i-have-a-spreadsheet-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "No thanks I have a spreadsheet · Kiss-Cut Stickers",
+          "productId": "6a4d2cdf792210fee906081d",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cdf792210fee906081d/45750/16655/no-thanks-i-have-a-spreadsheet-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "No thanks I have a spreadsheet · Tumbler 20oz",
+          "productId": "6a4d2ce43104c4a72002ade4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ce43104c4a72002ade4/44519/849/no-thanks-i-have-a-spreadsheet-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "No thanks I have a spreadsheet · Throw Pillow 18x18",
+          "productId": "6a4d2ce8436da7f080041bb7",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2ce8436da7f080041bb7/41527/47615/no-thanks-i-have-a-spreadsheet-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "No thanks I have a spreadsheet · Plush Blanket 50x60",
+          "productId": "6a4d2cf04b4628b46f0d6da5",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cf04b4628b46f0d6da5/68323/9076/no-thanks-i-have-a-spreadsheet-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "No thanks I have a spreadsheet · Desk Mat",
+          "productId": "6a4d2cf5792210fee9060828",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cf5792210fee9060828/65240/6570/no-thanks-i-have-a-spreadsheet-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "No thanks I have a spreadsheet · Phone Case",
+          "productId": "6a4d2cfad91be63e94076535",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2cfad91be63e94076535/62582/97458/no-thanks-i-have-a-spreadsheet-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "my-side-hustle-is-nothing",
@@ -1064,8 +1666,94 @@
       "subline": "and waiting",
       "caption": "The internet says you need seven income streams by Tuesday.\n\nMeanwhile your best move this month was not touching anything.\n\nPatience: the most underrated hustle.\n\n#moneymindset #personalfinance #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:19.220Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:19.220Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "My side hustle is doing nothing · Premium Tee",
+          "productId": "6a4d2d02ad2185ed0401191f",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d02ad2185ed0401191f/73207/98445/my-side-hustle-is-doing-nothing-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "My side hustle is doing nothing · Crewneck Sweatshirt",
+          "productId": "6a4d2d104b4628b46f0d6e21",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d104b4628b46f0d6e21/25458/98502/my-side-hustle-is-doing-nothing-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "My side hustle is doing nothing · Hoodie",
+          "productId": "6a4d2d19fd0a31095806b970",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d19fd0a31095806b970/32912/98424/my-side-hustle-is-doing-nothing-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "My side hustle is doing nothing · Mug 11oz",
+          "productId": "6a4d2d20fd0a31095806b977",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d20fd0a31095806b977/33719/6400/my-side-hustle-is-doing-nothing-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "My side hustle is doing nothing · Tote Bag",
+          "productId": "6a4d2d267ba284c7ce0c1bc2",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d267ba284c7ce0c1bc2/80815/109687/my-side-hustle-is-doing-nothing-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "My side hustle is doing nothing · Poster 18x24",
+          "productId": "6a4d2d2d7ba284c7ce0c1bc9",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d2d7ba284c7ce0c1bc9/43144/94696/my-side-hustle-is-doing-nothing-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "My side hustle is doing nothing · Canvas 16x20",
+          "productId": "6a4d2d3345a4b451590b034f",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d3345a4b451590b034f/91646/60171/my-side-hustle-is-doing-nothing-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "My side hustle is doing nothing · Hardcover Journal",
+          "productId": "6a4d2d397ba284c7ce0c1bd5",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d397ba284c7ce0c1bd5/65223/7338/my-side-hustle-is-doing-nothing-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "My side hustle is doing nothing · Kiss-Cut Stickers",
+          "productId": "6a4d2d3d7ba284c7ce0c1bd8",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d3d7ba284c7ce0c1bd8/45750/16655/my-side-hustle-is-doing-nothing-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "My side hustle is doing nothing · Tumbler 20oz",
+          "productId": "6a4d2d436d9506153303f0a5",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d436d9506153303f0a5/44519/849/my-side-hustle-is-doing-nothing-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "My side hustle is doing nothing · Throw Pillow 18x18",
+          "productId": "6a4d2d49792210fee906086a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d49792210fee906086a/41527/47615/my-side-hustle-is-doing-nothing-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "My side hustle is doing nothing · Plush Blanket 50x60",
+          "productId": "6a4d2d50792210fee9060875",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d50792210fee9060875/68323/9076/my-side-hustle-is-doing-nothing-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "My side hustle is doing nothing · Desk Mat",
+          "productId": "6a4d2d56792210fee906087f",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d56792210fee906087f/65240/6570/my-side-hustle-is-doing-nothing-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "My side hustle is doing nothing · Phone Case",
+          "productId": "6a4d2d5b1aacaa8a4b0580c7",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d5b1aacaa8a4b0580c7/62582/97458/my-side-hustle-is-doing-nothing-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "diversified-and-unbothered",
@@ -1076,8 +1764,94 @@
       "subline": "",
       "caption": "Market's up. Market's down. You're spread out and asleep.\n\nWhen nothing is your whole portfolio, everything is a problem.\n\nWhen everything is your portfolio, nothing is.\n\n#personalfinance #moneymindset #wealthbuilding",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:19.265Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:19.265Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "Diversified and unbothered · Premium Tee",
+          "productId": "6a4d2d637ba284c7ce0c1bfb",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d637ba284c7ce0c1bfb/73207/98445/diversified-and-unbothered-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "Diversified and unbothered · Crewneck Sweatshirt",
+          "productId": "6a4d2d6cfbc4acb84c0e9b51",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d6cfbc4acb84c0e9b51/25458/98502/diversified-and-unbothered-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "Diversified and unbothered · Hoodie",
+          "productId": "6a4d2d751aacaa8a4b0580df",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d751aacaa8a4b0580df/32912/98424/diversified-and-unbothered-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "Diversified and unbothered · Mug 11oz",
+          "productId": "6a4d2d7d7ba284c7ce0c1c0c",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d7d7ba284c7ce0c1c0c/33719/6400/diversified-and-unbothered-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "Diversified and unbothered · Tote Bag",
+          "productId": "6a4d2d8445a4b451590b03b7",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d8445a4b451590b03b7/80815/109687/diversified-and-unbothered-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "Diversified and unbothered · Poster 18x24",
+          "productId": "6a4d2d8c45a4b451590b03bd",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d8c45a4b451590b03bd/43144/94696/diversified-and-unbothered-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "Diversified and unbothered · Canvas 16x20",
+          "productId": "6a4d2d926d9506153303f0e9",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d926d9506153303f0e9/91646/60171/diversified-and-unbothered-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "Diversified and unbothered · Hardcover Journal",
+          "productId": "6a4d2d9cfbc4acb84c0e9b7a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d9cfbc4acb84c0e9b7a/65223/7338/diversified-and-unbothered-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "Diversified and unbothered · Kiss-Cut Stickers",
+          "productId": "6a4d2d9ffbc4acb84c0e9b82",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2d9ffbc4acb84c0e9b82/45750/16655/diversified-and-unbothered-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "Diversified and unbothered · Tumbler 20oz",
+          "productId": "6a4d2da67ba284c7ce0c1c2b",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2da67ba284c7ce0c1c2b/44519/849/diversified-and-unbothered-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "Diversified and unbothered · Throw Pillow 18x18",
+          "productId": "6a4d2dacd91be63e940765d0",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2dacd91be63e940765d0/41527/47615/diversified-and-unbothered-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "Diversified and unbothered · Plush Blanket 50x60",
+          "productId": "6a4d2db24b4628b46f0d6ea4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2db24b4628b46f0d6ea4/68323/9076/diversified-and-unbothered-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "Diversified and unbothered · Desk Mat",
+          "productId": "6a4d2db9fbc4acb84c0e9b94",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2db9fbc4acb84c0e9b94/65240/6570/diversified-and-unbothered-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "Diversified and unbothered · Phone Case",
+          "productId": "6a4d2dbd792210fee90608c8",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2dbd792210fee90608c8/62582/97458/diversified-and-unbothered-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     },
     {
       "slug": "worlds-okayest-budgeter",
@@ -1088,8 +1862,94 @@
       "subline": "close enough",
       "caption": "For the person who tracks the grocery bill but still buys the good coffee.\n\nNot perfect. Not obsessed. Just quietly on top of it.\n\nThe gift for the one who's actually good with money.\n\n#personalfinance #moneymindset",
       "approved": false,
-      "status": "draft",
-      "createdAt": "2026-07-07T16:05:19.312Z"
+      "status": "mockups-ready",
+      "createdAt": "2026-07-07T16:05:19.312Z",
+      "products": [
+        {
+          "key": "tee",
+          "title": "World's Okayest Budgeter · Premium Tee",
+          "productId": "6a4d2dcb7ba284c7ce0c1c83",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2dcb7ba284c7ce0c1c83/73207/98445/worlds-okayest-budgeter-premium-tee.jpg?camera_label=front"
+        },
+        {
+          "key": "crewneck",
+          "title": "World's Okayest Budgeter · Crewneck Sweatshirt",
+          "productId": "6a4d2dd9d91be63e94076610",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2dd9d91be63e94076610/25458/98502/worlds-okayest-budgeter-crewneck-sweatshirt.jpg?camera_label=front"
+        },
+        {
+          "key": "hoodie",
+          "title": "World's Okayest Budgeter · Hoodie",
+          "productId": "6a4d2de36d9506153303f11a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2de36d9506153303f11a/32912/98424/worlds-okayest-budgeter-hoodie.jpg?camera_label=front"
+        },
+        {
+          "key": "mug",
+          "title": "World's Okayest Budgeter · Mug 11oz",
+          "productId": "6a4d2deb7ba284c7ce0c1c91",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2deb7ba284c7ce0c1c91/33719/6400/worlds-okayest-budgeter-mug-11oz.jpg?camera_label=front"
+        },
+        {
+          "key": "tote",
+          "title": "World's Okayest Budgeter · Tote Bag",
+          "productId": "6a4d2df11aacaa8a4b05814e",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2df11aacaa8a4b05814e/80815/109687/worlds-okayest-budgeter-tote-bag.jpg?camera_label=front"
+        },
+        {
+          "key": "poster",
+          "title": "World's Okayest Budgeter · Poster 18x24",
+          "productId": "6a4d2df61aacaa8a4b058150",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2df61aacaa8a4b058150/43144/94696/worlds-okayest-budgeter-poster-18x24.jpg?camera_label=front"
+        },
+        {
+          "key": "canvas",
+          "title": "World's Okayest Budgeter · Canvas 16x20",
+          "productId": "6a4d2dfd7ba284c7ce0c1c9a",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2dfd7ba284c7ce0c1c9a/91646/60171/worlds-okayest-budgeter-canvas-16x20.jpg?camera_label=front"
+        },
+        {
+          "key": "journal",
+          "title": "World's Okayest Budgeter · Hardcover Journal",
+          "productId": "6a4d2e04d91be63e94076626",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2e04d91be63e94076626/65223/7338/worlds-okayest-budgeter-hardcover-journal.jpg?camera_label=front"
+        },
+        {
+          "key": "stickers",
+          "title": "World's Okayest Budgeter · Kiss-Cut Stickers",
+          "productId": "6a4d2e0a7ba284c7ce0c1c9d",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2e0a7ba284c7ce0c1c9d/45750/16655/worlds-okayest-budgeter-kiss-cut-stickers.jpg?camera_label=front"
+        },
+        {
+          "key": "tumbler",
+          "title": "World's Okayest Budgeter · Tumbler 20oz",
+          "productId": "6a4d2e103104c4a72002aec4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2e103104c4a72002aec4/44519/849/worlds-okayest-budgeter-tumbler-20oz.jpg?camera_label=front"
+        },
+        {
+          "key": "pillow",
+          "title": "World's Okayest Budgeter · Throw Pillow 18x18",
+          "productId": "6a4d2e164b4628b46f0d6eee",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2e164b4628b46f0d6eee/41527/47615/worlds-okayest-budgeter-throw-pillow-18x18.jpg?camera_label=front"
+        },
+        {
+          "key": "blanket",
+          "title": "World's Okayest Budgeter · Plush Blanket 50x60",
+          "productId": "6a4d2e217ba284c7ce0c1cb7",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2e217ba284c7ce0c1cb7/68323/9076/worlds-okayest-budgeter-plush-blanket-50x60.jpg?camera_label=front"
+        },
+        {
+          "key": "deskmat",
+          "title": "World's Okayest Budgeter · Desk Mat",
+          "productId": "6a4d2e2b792210fee9060946",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2e2b792210fee9060946/65240/6570/worlds-okayest-budgeter-desk-mat.jpg?camera_label=front"
+        },
+        {
+          "key": "phonecase",
+          "title": "World's Okayest Budgeter · Phone Case",
+          "productId": "6a4d2e307ba284c7ce0c1cc4",
+          "mockupUrl": "https://images-api.printify.com/mockup/6a4d2e307ba284c7ce0c1cc4/62582/97458/worlds-okayest-budgeter-phone-case.jpg?camera_label=front-and-side"
+        }
+      ]
     }
   ]
 }
