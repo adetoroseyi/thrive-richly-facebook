@@ -4501,7 +4501,9 @@
       "author": "Thomas Edison",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-06-01"
+      "postedAt": "2026-06-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-08"
     },
     {
       "id": 499,
@@ -4510,7 +4512,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-06-01"
+      "postedAt": "2026-06-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-08"
     },
     {
       "id": 500,
@@ -4519,7 +4523,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-06-01"
+      "postedAt": "2026-06-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-08"
     },
     {
       "id": 501,
