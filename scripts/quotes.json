@@ -4474,7 +4474,9 @@
       "author": "Walt Disney",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-30"
+      "postedAt": "2026-05-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-09"
     },
     {
       "id": 496,
@@ -4483,7 +4485,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-30"
+      "postedAt": "2026-05-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-09"
     },
     {
       "id": 497,
@@ -4492,7 +4496,9 @@
       "author": "Tony Robbins",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-30"
+      "postedAt": "2026-05-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-09"
     },
     {
       "id": 498,
