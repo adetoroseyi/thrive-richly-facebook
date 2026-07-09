@@ -101,11 +101,17 @@
       "id": 5,
       "format": "link",
       "approved": true,
-      "status": "queued",
+      "status": "posted",
       "link": "https://thriverichly.gumroad.com/l/thriverichlymasterclass",
       "caption": "You don't rise to your income. You fall to your system.\n\nA bigger salary with no system disappears.\nA modest salary with a system compounds.\n\nThat's why two people earning the same money can end up decades apart.\n\nIf you want the exact system — step by step, starting from zero — it's all in The Wealth Masterclass. Link below.\n\n#personalfinance #wealthbuilding",
-      "postedAt": null,
-      "publicUrl": null
+      "postedAt": "2026-07-09T09:51:04.965Z",
+      "publicUrl": "https://facebook.com/216309642249176_1349989513907325",
+      "platforms": [
+        {
+          "platform": "facebook",
+          "postSubmissionId": "a9ca33b0-cd6f-48b9-89e8-da77aa4aecde"
+        }
+      ]
     }
   ]
 }
