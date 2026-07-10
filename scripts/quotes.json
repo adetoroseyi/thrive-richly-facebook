@@ -4447,7 +4447,9 @@
       "author": "George Bernard Shaw",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-29"
+      "postedAt": "2026-05-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-10"
     },
     {
       "id": 493,
@@ -4456,7 +4458,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-30"
+      "postedAt": "2026-05-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-10"
     },
     {
       "id": 494,
@@ -4465,7 +4469,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-30"
+      "postedAt": "2026-05-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-10"
     },
     {
       "id": 495,
