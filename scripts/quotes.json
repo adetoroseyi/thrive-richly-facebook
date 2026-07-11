@@ -4420,7 +4420,9 @@
       "author": "Benjamin Franklin",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-29"
+      "postedAt": "2026-05-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-11"
     },
     {
       "id": 490,
@@ -4429,7 +4431,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-29"
+      "postedAt": "2026-05-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-11"
     },
     {
       "id": 491,
@@ -4438,7 +4442,9 @@
       "author": "Peter Drucker",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-29"
+      "postedAt": "2026-05-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-11"
     },
     {
       "id": 492,
