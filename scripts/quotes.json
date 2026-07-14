@@ -4339,7 +4339,9 @@
       "author": "Steve Jobs",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-27"
+      "postedAt": "2026-05-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-14"
     },
     {
       "id": 481,
@@ -4348,7 +4350,9 @@
       "author": "Toni Morrison",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-27"
+      "postedAt": "2026-05-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-14"
     },
     {
       "id": 482,
@@ -4357,7 +4361,9 @@
       "author": "Tom Landry",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-27"
+      "postedAt": "2026-05-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-14"
     },
     {
       "id": 483,
