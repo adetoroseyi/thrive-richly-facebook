@@ -4312,7 +4312,9 @@
       "author": "Tony Robbins",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-26"
+      "postedAt": "2026-05-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-15"
     },
     {
       "id": 478,
@@ -4321,7 +4323,9 @@
       "author": "Eleanor Roosevelt",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-27"
+      "postedAt": "2026-05-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-15"
     },
     {
       "id": 479,
@@ -4330,7 +4334,9 @@
       "author": "Zig Ziglar",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-27"
+      "postedAt": "2026-05-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-15"
     },
     {
       "id": 480,
