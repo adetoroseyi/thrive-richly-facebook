@@ -4285,7 +4285,9 @@
       "author": "Earl Nightingale",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-26"
+      "postedAt": "2026-05-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-16"
     },
     {
       "id": 475,
@@ -4294,7 +4296,9 @@
       "author": "Walt Disney",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-26"
+      "postedAt": "2026-05-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-16"
     },
     {
       "id": 476,
@@ -4303,7 +4307,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-26"
+      "postedAt": "2026-05-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-16"
     },
     {
       "id": 477,
