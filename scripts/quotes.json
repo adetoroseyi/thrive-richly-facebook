@@ -4258,7 +4258,9 @@
       "author": "Oprah Winfrey",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-25"
+      "postedAt": "2026-05-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-17"
     },
     {
       "id": 472,
@@ -4267,7 +4269,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-25"
+      "postedAt": "2026-05-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-17"
     },
     {
       "id": 473,
@@ -4276,7 +4280,9 @@
       "author": "Henry Ford",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-26"
+      "postedAt": "2026-05-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-17"
     },
     {
       "id": 474,
