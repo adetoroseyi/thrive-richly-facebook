@@ -4231,7 +4231,9 @@
       "author": "Napoleon Hill",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-25"
+      "postedAt": "2026-05-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-18"
     },
     {
       "id": 469,
@@ -4240,7 +4242,9 @@
       "author": "Will Rogers",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-25"
+      "postedAt": "2026-05-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-18"
     },
     {
       "id": 470,
@@ -4249,7 +4253,9 @@
       "author": "W. Clement Stone",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-25"
+      "postedAt": "2026-05-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-18"
     },
     {
       "id": 471,
