@@ -4177,7 +4177,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-23"
+      "postedAt": "2026-05-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-21"
     },
     {
       "id": 463,
@@ -4186,7 +4188,9 @@
       "author": "Milton Berle",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-24"
+      "postedAt": "2026-05-24",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-21"
     },
     {
       "id": 464,
@@ -4195,7 +4199,9 @@
       "author": "Napoleon Hill",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-24"
+      "postedAt": "2026-05-24",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-21"
     },
     {
       "id": 465,
