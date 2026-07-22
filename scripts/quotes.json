@@ -4150,7 +4150,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-23"
+      "postedAt": "2026-05-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-22"
     },
     {
       "id": 460,
@@ -4159,7 +4161,9 @@
       "author": "Zig Ziglar",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-23"
+      "postedAt": "2026-05-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-22"
     },
     {
       "id": 461,
@@ -4168,7 +4172,9 @@
       "author": "Oprah Winfrey",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-23"
+      "postedAt": "2026-05-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-22"
     },
     {
       "id": 462,
