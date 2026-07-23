@@ -4123,7 +4123,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-22"
+      "postedAt": "2026-05-22",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-23"
     },
     {
       "id": 457,
@@ -4132,7 +4134,9 @@
       "author": "Henry David Thoreau",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-22"
+      "postedAt": "2026-05-22",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-23"
     },
     {
       "id": 458,
@@ -4141,7 +4145,9 @@
       "author": "Winston Churchill",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-23"
+      "postedAt": "2026-05-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-23"
     },
     {
       "id": 459,
