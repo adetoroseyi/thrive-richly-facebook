@@ -4096,7 +4096,9 @@
       "author": "Roy T. Bennett",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-22"
+      "postedAt": "2026-05-22",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-24"
     },
     {
       "id": 454,
@@ -4105,7 +4107,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-21"
+      "postedAt": "2026-05-21",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-24"
     },
     {
       "id": 455,
@@ -4114,7 +4118,9 @@
       "author": "Norman Vincent Peale",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-22"
+      "postedAt": "2026-05-22",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-24"
     },
     {
       "id": 456,
