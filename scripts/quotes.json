@@ -4042,7 +4042,9 @@
       "author": "Henry Ford",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-20"
+      "postedAt": "2026-05-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-26"
     },
     {
       "id": 448,
@@ -4051,7 +4053,9 @@
       "author": "Oprah Winfrey",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-20"
+      "postedAt": "2026-05-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-26"
     },
     {
       "id": 449,
@@ -4060,7 +4064,9 @@
       "author": "Bill Gates",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-20"
+      "postedAt": "2026-05-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-26"
     },
     {
       "id": 450,
