@@ -4015,7 +4015,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-19"
+      "postedAt": "2026-05-19",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-27"
     },
     {
       "id": 445,
@@ -4024,7 +4026,9 @@
       "author": "Winston Churchill",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-19"
+      "postedAt": "2026-05-19",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-27"
     },
     {
       "id": 446,
@@ -4033,7 +4037,9 @@
       "author": "Buddha",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-20"
+      "postedAt": "2026-05-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-27"
     },
     {
       "id": 447,
