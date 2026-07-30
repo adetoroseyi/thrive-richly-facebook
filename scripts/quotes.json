@@ -3934,7 +3934,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-17"
+      "postedAt": "2026-05-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-30"
     },
     {
       "id": 436,
@@ -3943,7 +3945,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-18"
+      "postedAt": "2026-05-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-30"
     },
     {
       "id": 437,
@@ -3952,7 +3956,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-18"
+      "postedAt": "2026-05-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-07-30"
     },
     {
       "id": 438,
