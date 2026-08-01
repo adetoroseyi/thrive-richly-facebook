@@ -3880,7 +3880,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-16"
+      "postedAt": "2026-05-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-01"
     },
     {
       "id": 430,
@@ -3889,7 +3891,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-16"
+      "postedAt": "2026-05-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-01"
     },
     {
       "id": 431,
@@ -3898,7 +3902,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-17"
+      "postedAt": "2026-05-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-01"
     },
     {
       "id": 432,
