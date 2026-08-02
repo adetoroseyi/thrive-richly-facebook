@@ -3853,7 +3853,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-16"
+      "postedAt": "2026-05-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-02"
     },
     {
       "id": 427,
@@ -3862,7 +3864,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-16"
+      "postedAt": "2026-05-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-02"
     },
     {
       "id": 428,
@@ -3871,7 +3875,9 @@
       "author": "Elizabeth Gilbert",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-16"
+      "postedAt": "2026-05-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-02"
     },
     {
       "id": 429,
