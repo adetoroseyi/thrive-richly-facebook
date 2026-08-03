@@ -3826,7 +3826,9 @@
       "author": "Oprah Winfrey",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-15"
+      "postedAt": "2026-05-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-03"
     },
     {
       "id": 424,
@@ -3835,7 +3837,9 @@
       "author": "Erol Ozan",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-15"
+      "postedAt": "2026-05-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-03"
     },
     {
       "id": 425,
@@ -3844,7 +3848,9 @@
       "author": "Regina Brett",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-15"
+      "postedAt": "2026-05-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-03"
     },
     {
       "id": 426,
