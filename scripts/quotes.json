@@ -3745,7 +3745,9 @@
       "author": "Andrew Murphy",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-13"
+      "postedAt": "2026-05-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-06"
     },
     {
       "id": 415,
@@ -3754,7 +3756,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-13"
+      "postedAt": "2026-05-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-06"
     },
     {
       "id": 416,
@@ -3763,7 +3767,9 @@
       "author": "Ralph Waldo Emerson",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-14"
+      "postedAt": "2026-05-14",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-06"
     },
     {
       "id": 417,
