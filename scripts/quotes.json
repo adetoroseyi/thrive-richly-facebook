@@ -3718,7 +3718,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-13"
+      "postedAt": "2026-05-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-07"
     },
     {
       "id": 412,
@@ -3727,7 +3729,9 @@
       "author": "Alysia Harris",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-13"
+      "postedAt": "2026-05-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-07"
     },
     {
       "id": 413,
@@ -3736,7 +3740,9 @@
       "author": "Japanese Proverb",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-13"
+      "postedAt": "2026-05-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-07"
     },
     {
       "id": 414,
