@@ -3610,7 +3610,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-10"
+      "postedAt": "2026-05-10",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-11"
     },
     {
       "id": 400,
@@ -3619,7 +3621,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-10"
+      "postedAt": "2026-05-10",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-11"
     },
     {
       "id": 401,
@@ -3628,7 +3632,9 @@
       "author": "Sonya Friedman",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-11"
+      "postedAt": "2026-05-11",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-11"
     },
     {
       "id": 402,
