@@ -3556,7 +3556,9 @@
       "author": "Maria Robinson",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-09"
+      "postedAt": "2026-05-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-13"
     },
     {
       "id": 394,
@@ -3565,7 +3567,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-09"
+      "postedAt": "2026-05-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-13"
     },
     {
       "id": 395,
@@ -3574,7 +3578,9 @@
       "author": "Suzy Kassem",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-09"
+      "postedAt": "2026-05-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-13"
     },
     {
       "id": 396,
