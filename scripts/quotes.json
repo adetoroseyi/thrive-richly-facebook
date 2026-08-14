@@ -3529,7 +3529,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-08"
+      "postedAt": "2026-05-08",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-14"
     },
     {
       "id": 391,
@@ -3538,7 +3540,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-09"
+      "postedAt": "2026-05-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-14"
     },
     {
       "id": 392,
@@ -3547,7 +3551,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-05-09"
+      "postedAt": "2026-05-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-14"
     },
     {
       "id": 393,
