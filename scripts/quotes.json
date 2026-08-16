@@ -3475,7 +3475,9 @@
       "author": "Thomas Jefferson",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-07"
+      "postedAt": "2026-05-07",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-16"
     },
     {
       "id": 385,
@@ -3484,7 +3486,9 @@
       "author": "Abraham Joshua Heschel",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-07"
+      "postedAt": "2026-05-07",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-16"
     },
     {
       "id": 386,
@@ -3493,7 +3497,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-08"
+      "postedAt": "2026-05-08",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-16"
     },
     {
       "id": 387,
