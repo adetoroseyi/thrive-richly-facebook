@@ -3421,7 +3421,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-05"
+      "postedAt": "2026-05-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-18"
     },
     {
       "id": 379,
@@ -3430,7 +3432,9 @@
       "author": "George Addair",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-05"
+      "postedAt": "2026-05-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-18"
     },
     {
       "id": 380,
@@ -3439,7 +3443,9 @@
       "author": "Theodore Roosevelt",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-05"
+      "postedAt": "2026-05-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-18"
     },
     {
       "id": 381,
