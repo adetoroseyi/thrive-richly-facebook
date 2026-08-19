@@ -3394,7 +3394,9 @@
       "author": "Beyonce",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-05-04"
+      "postedAt": "2026-05-04",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-19"
     },
     {
       "id": 376,
@@ -3403,7 +3405,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-05"
+      "postedAt": "2026-05-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-19"
     },
     {
       "id": 377,
@@ -3412,7 +3416,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-05-05"
+      "postedAt": "2026-05-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-19"
     },
     {
       "id": 378,
