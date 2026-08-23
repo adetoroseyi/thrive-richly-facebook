@@ -3286,7 +3286,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-02"
+      "postedAt": "2026-05-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-23"
     },
     {
       "id": 364,
@@ -3295,7 +3297,9 @@
       "author": "William James",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-02"
+      "postedAt": "2026-05-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-23"
     },
     {
       "id": 365,
@@ -3304,7 +3308,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-02"
+      "postedAt": "2026-05-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-23"
     },
     {
       "id": 366,
