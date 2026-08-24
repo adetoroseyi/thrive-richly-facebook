@@ -3259,7 +3259,9 @@
       "author": "Carl Jung",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-01"
+      "postedAt": "2026-05-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-24"
     },
     {
       "id": 361,
@@ -3268,7 +3270,9 @@
       "author": "Zen Proverb",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-02"
+      "postedAt": "2026-05-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-24"
     },
     {
       "id": 362,
@@ -3277,7 +3281,9 @@
       "author": "Theodore Roosevelt",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-05-02"
+      "postedAt": "2026-05-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-24"
     },
     {
       "id": 363,
