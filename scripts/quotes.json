@@ -3232,7 +3232,9 @@
       "author": "Les Brown",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-01"
+      "postedAt": "2026-05-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-25"
     },
     {
       "id": 358,
@@ -3241,7 +3243,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-01"
+      "postedAt": "2026-05-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-25"
     },
     {
       "id": 359,
@@ -3250,7 +3254,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-01"
+      "postedAt": "2026-05-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-25"
     },
     {
       "id": 360,
