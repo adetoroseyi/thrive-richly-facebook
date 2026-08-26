@@ -3205,7 +3205,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-30"
+      "postedAt": "2026-04-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-26"
     },
     {
       "id": 355,
@@ -3214,7 +3216,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-30"
+      "postedAt": "2026-04-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-26"
     },
     {
       "id": 356,
@@ -3223,7 +3227,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-05-01"
+      "postedAt": "2026-05-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-26"
     },
     {
       "id": 357,
