@@ -3178,7 +3178,9 @@
       "author": "Steve Maraboli",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-30"
+      "postedAt": "2026-04-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-27"
     },
     {
       "id": 352,
@@ -3187,7 +3189,9 @@
       "author": "Eleanor Roosevelt",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-30"
+      "postedAt": "2026-04-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-27"
     },
     {
       "id": 353,
@@ -3196,7 +3200,9 @@
       "author": "Maya Angelou",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-30"
+      "postedAt": "2026-04-30",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-27"
     },
     {
       "id": 354,
