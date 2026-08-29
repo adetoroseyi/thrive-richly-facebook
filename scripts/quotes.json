@@ -3124,7 +3124,9 @@
       "author": "Neale Donald Walsch",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-28"
+      "postedAt": "2026-04-28",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-29"
     },
     {
       "id": 346,
@@ -3133,7 +3135,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-29"
+      "postedAt": "2026-04-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-29"
     },
     {
       "id": 347,
@@ -3142,7 +3146,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-29"
+      "postedAt": "2026-04-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-29"
     },
     {
       "id": 348,
