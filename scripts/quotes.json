@@ -3070,7 +3070,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-27"
+      "postedAt": "2026-04-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-31"
     },
     {
       "id": 340,
@@ -3079,7 +3081,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-27"
+      "postedAt": "2026-04-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-31"
     },
     {
       "id": 341,
@@ -3088,7 +3092,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-28"
+      "postedAt": "2026-04-28",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-08-31"
     },
     {
       "id": 342,
