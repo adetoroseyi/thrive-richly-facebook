@@ -3043,7 +3043,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-27"
+      "postedAt": "2026-04-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-01"
     },
     {
       "id": 337,
@@ -3052,7 +3054,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-27"
+      "postedAt": "2026-04-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-01"
     },
     {
       "id": 338,
@@ -3061,7 +3065,9 @@
       "author": "Neale Donald Walsch",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-27"
+      "postedAt": "2026-04-27",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-01"
     },
     {
       "id": 339,
