@@ -3016,7 +3016,9 @@
       "author": "John Mason",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-26"
+      "postedAt": "2026-04-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-02"
     },
     {
       "id": 334,
@@ -3025,7 +3027,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-26"
+      "postedAt": "2026-04-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-02"
     },
     {
       "id": 335,
@@ -3034,7 +3038,9 @@
       "author": "Jim Cathcart",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-26"
+      "postedAt": "2026-04-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-02"
     },
     {
       "id": 336,
