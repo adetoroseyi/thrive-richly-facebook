@@ -2989,7 +2989,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-25"
+      "postedAt": "2026-04-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-03"
     },
     {
       "id": 331,
@@ -2998,7 +3000,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-26"
+      "postedAt": "2026-04-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-03"
     },
     {
       "id": 332,
@@ -3007,7 +3011,9 @@
       "author": "John D. Rockefeller",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-26"
+      "postedAt": "2026-04-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-03"
     },
     {
       "id": 333,
