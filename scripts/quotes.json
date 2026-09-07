@@ -2881,7 +2881,9 @@
       "author": "Franklin D. Roosevelt",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-23"
+      "postedAt": "2026-04-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-07"
     },
     {
       "id": 319,
@@ -2890,7 +2892,9 @@
       "author": "Oscar Wilde",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-23"
+      "postedAt": "2026-04-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-07"
     },
     {
       "id": 320,
@@ -2899,7 +2903,9 @@
       "author": "Rumi",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-23"
+      "postedAt": "2026-04-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-07"
     },
     {
       "id": 321,
