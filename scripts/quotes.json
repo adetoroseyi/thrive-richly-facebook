@@ -2773,7 +2773,9 @@
       "author": "Tim Fargo",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-21"
+      "postedAt": "2026-04-21",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-11"
     },
     {
       "id": 307,
@@ -2782,7 +2784,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-21"
+      "postedAt": "2026-04-21",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-11"
     },
     {
       "id": 308,
@@ -2791,7 +2795,9 @@
       "author": "Wayne Dyer",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-21"
+      "postedAt": "2026-04-21",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-11"
     },
     {
       "id": 309,
