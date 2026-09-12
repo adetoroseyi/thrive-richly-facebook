@@ -2746,7 +2746,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-20"
+      "postedAt": "2026-04-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-12"
     },
     {
       "id": 304,
@@ -2755,7 +2757,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-20"
+      "postedAt": "2026-04-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-12"
     },
     {
       "id": 305,
@@ -2764,7 +2768,9 @@
       "author": "Ginni Rometty",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-20"
+      "postedAt": "2026-04-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-12"
     },
     {
       "id": 306,
