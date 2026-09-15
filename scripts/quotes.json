@@ -2665,7 +2665,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-18"
+      "postedAt": "2026-04-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-15"
     },
     {
       "id": 295,
@@ -2674,7 +2676,9 @@
       "author": "Naval Ravikant",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-18"
+      "postedAt": "2026-04-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-15"
     },
     {
       "id": 296,
@@ -2683,7 +2687,9 @@
       "author": "Zig Ziglar",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-19"
+      "postedAt": "2026-04-19",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-15"
     },
     {
       "id": 297,
