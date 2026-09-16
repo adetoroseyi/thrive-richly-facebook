@@ -2638,7 +2638,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-18"
+      "postedAt": "2026-04-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-16"
     },
     {
       "id": 292,
@@ -2647,7 +2649,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-18"
+      "postedAt": "2026-04-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-16"
     },
     {
       "id": 293,
@@ -2656,7 +2660,9 @@
       "author": "Mark Twain",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-18"
+      "postedAt": "2026-04-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-16"
     },
     {
       "id": 294,
