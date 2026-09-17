@@ -2611,7 +2611,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-17"
+      "postedAt": "2026-04-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-17"
     },
     {
       "id": 289,
@@ -2620,7 +2622,9 @@
       "author": "Henry Kissinger",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-17"
+      "postedAt": "2026-04-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-17"
     },
     {
       "id": 290,
@@ -2629,7 +2633,9 @@
       "author": "Steve Jobs",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-17"
+      "postedAt": "2026-04-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-17"
     },
     {
       "id": 291,
