@@ -2584,7 +2584,9 @@
       "author": "Tony Gaskins",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-16"
+      "postedAt": "2026-04-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-18"
     },
     {
       "id": 286,
@@ -2593,7 +2595,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-17"
+      "postedAt": "2026-04-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-18"
     },
     {
       "id": 287,
@@ -2602,7 +2606,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-17"
+      "postedAt": "2026-04-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-18"
     },
     {
       "id": 288,
