@@ -2530,7 +2530,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-15"
+      "postedAt": "2026-04-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-20"
     },
     {
       "id": 280,
@@ -2539,7 +2541,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-15"
+      "postedAt": "2026-04-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-20"
     },
     {
       "id": 281,
@@ -2548,7 +2552,9 @@
       "author": "Harvey Specter",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-16"
+      "postedAt": "2026-04-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-20"
     },
     {
       "id": 282,
