@@ -2503,7 +2503,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-15"
+      "postedAt": "2026-04-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-21"
     },
     {
       "id": 277,
@@ -2512,7 +2514,9 @@
       "author": "Fred DeVito",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-15"
+      "postedAt": "2026-04-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-21"
     },
     {
       "id": 278,
@@ -2521,7 +2525,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-15"
+      "postedAt": "2026-04-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-21"
     },
     {
       "id": 279,
