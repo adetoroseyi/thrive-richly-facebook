@@ -2476,7 +2476,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-14"
+      "postedAt": "2026-04-14",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-22"
     },
     {
       "id": 274,
@@ -2485,7 +2487,9 @@
       "author": "Thomas Carlyle",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-14"
+      "postedAt": "2026-04-14",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-22"
     },
     {
       "id": 275,
@@ -2494,7 +2498,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-14"
+      "postedAt": "2026-04-14",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-22"
     },
     {
       "id": 276,
