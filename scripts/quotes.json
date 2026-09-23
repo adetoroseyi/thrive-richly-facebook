@@ -2449,7 +2449,9 @@
       "author": "Charles Dickens",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-13"
+      "postedAt": "2026-04-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-23"
     },
     {
       "id": 271,
@@ -2458,7 +2460,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-14"
+      "postedAt": "2026-04-14",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-23"
     },
     {
       "id": 272,
@@ -2467,7 +2471,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-14"
+      "postedAt": "2026-04-14",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-23"
     },
     {
       "id": 273,
