@@ -2395,7 +2395,9 @@
       "author": "Earl Nightingale",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-12"
+      "postedAt": "2026-04-12",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-25"
     },
     {
       "id": 265,
@@ -2404,7 +2406,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-12"
+      "postedAt": "2026-04-12",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-25"
     },
     {
       "id": 266,
@@ -2413,7 +2417,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-13"
+      "postedAt": "2026-04-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-25"
     },
     {
       "id": 267,
