@@ -2368,7 +2368,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-12"
+      "postedAt": "2026-04-12",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-26"
     },
     {
       "id": 262,
@@ -2377,7 +2379,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-12"
+      "postedAt": "2026-04-12",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-26"
     },
     {
       "id": 263,
@@ -2386,7 +2390,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-12"
+      "postedAt": "2026-04-12",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-26"
     },
     {
       "id": 264,
