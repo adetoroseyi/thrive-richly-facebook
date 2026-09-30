@@ -2260,7 +2260,9 @@
       "author": "Mark Twain",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-09"
+      "postedAt": "2026-04-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-30"
     },
     {
       "id": 250,
@@ -2269,7 +2271,9 @@
       "author": "John A. Shedd",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-09"
+      "postedAt": "2026-04-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-30"
     },
     {
       "id": 251,
@@ -2278,7 +2282,9 @@
       "author": "John Wooden",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-10"
+      "postedAt": "2026-04-10",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-09-30"
     },
     {
       "id": 252,
