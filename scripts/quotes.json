@@ -2233,7 +2233,9 @@
       "author": "Tony Robbins",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-09"
+      "postedAt": "2026-04-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-01"
     },
     {
       "id": 247,
@@ -2242,7 +2244,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-09"
+      "postedAt": "2026-04-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-01"
     },
     {
       "id": 248,
@@ -2251,7 +2255,9 @@
       "author": "Bo Bennett",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-09"
+      "postedAt": "2026-04-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-01"
     },
     {
       "id": 249,
