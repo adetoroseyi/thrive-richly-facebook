@@ -2179,7 +2179,9 @@
       "author": "Mark Cuban",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-07"
+      "postedAt": "2026-04-07",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-03"
     },
     {
       "id": 241,
@@ -2188,7 +2190,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-08"
+      "postedAt": "2026-04-08",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-03"
     },
     {
       "id": 242,
@@ -2197,7 +2201,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-04-08"
+      "postedAt": "2026-04-08",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-03"
     },
     {
       "id": 243,
