@@ -2152,7 +2152,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-07"
+      "postedAt": "2026-04-07",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-04"
     },
     {
       "id": 238,
@@ -2161,7 +2163,9 @@
       "author": "Ralph Nader",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-07"
+      "postedAt": "2026-04-07",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-04"
     },
     {
       "id": 239,
@@ -2170,7 +2174,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-07"
+      "postedAt": "2026-04-07",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-04"
     },
     {
       "id": 240,
