@@ -2098,7 +2098,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-06"
+      "postedAt": "2026-04-06",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-06"
     },
     {
       "id": 232,
@@ -2107,7 +2109,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-06"
+      "postedAt": "2026-04-06",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-06"
     },
     {
       "id": 233,
@@ -2116,7 +2120,9 @@
       "author": "Zig Ziglar",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-06"
+      "postedAt": "2026-04-06",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-06"
     },
     {
       "id": 234,
