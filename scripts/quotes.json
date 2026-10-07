@@ -2071,7 +2071,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-05"
+      "postedAt": "2026-04-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-07"
     },
     {
       "id": 229,
@@ -2080,7 +2082,9 @@
       "author": "Walt Disney",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-05"
+      "postedAt": "2026-04-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-07"
     },
     {
       "id": 230,
@@ -2089,7 +2093,9 @@
       "author": "Karen Lamb",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-04-05"
+      "postedAt": "2026-04-05",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-07"
     },
     {
       "id": 231,
