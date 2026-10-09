@@ -2017,7 +2017,9 @@
       "author": "Bruce Lee",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-04"
+      "postedAt": "2026-04-04",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-09"
     },
     {
       "id": 223,
@@ -2026,7 +2028,9 @@
       "author": "Nelson Mandela",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-04"
+      "postedAt": "2026-04-04",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-09"
     },
     {
       "id": 224,
@@ -2035,7 +2039,9 @@
       "author": "Tony Robbins",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-04-04"
+      "postedAt": "2026-04-04",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-09"
     },
     {
       "id": 225,
