@@ -1936,7 +1936,9 @@
       "author": "Suzy Kassem",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-02"
+      "postedAt": "2026-04-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-12"
     },
     {
       "id": 214,
@@ -1945,7 +1947,9 @@
       "author": "Zig Ziglar",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-02"
+      "postedAt": "2026-04-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-12"
     },
     {
       "id": 215,
@@ -1954,7 +1958,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-02"
+      "postedAt": "2026-04-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-12"
     },
     {
       "id": 216,
