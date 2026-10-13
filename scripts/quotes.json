@@ -1909,7 +1909,9 @@
       "author": "Steve Martin",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-04-01"
+      "postedAt": "2026-04-01",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-13"
     },
     {
       "id": 211,
@@ -1918,7 +1920,9 @@
       "author": "Winston Churchill",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-02"
+      "postedAt": "2026-04-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-13"
     },
     {
       "id": 212,
@@ -1927,7 +1931,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-04-02"
+      "postedAt": "2026-04-02",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-13"
     },
     {
       "id": 213,
