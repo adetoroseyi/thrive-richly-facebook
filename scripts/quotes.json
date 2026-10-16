@@ -1828,7 +1828,9 @@
       "author": "Thomas Edison",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-31"
+      "postedAt": "2026-03-31",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-16"
     },
     {
       "id": 202,
@@ -1837,7 +1839,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-31"
+      "postedAt": "2026-03-31",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-16"
     },
     {
       "id": 203,
@@ -1846,7 +1850,9 @@
       "author": "Proverbs 10:4",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-31"
+      "postedAt": "2026-03-31",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-16"
     },
     {
       "id": 204,
