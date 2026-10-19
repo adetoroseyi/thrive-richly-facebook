@@ -1747,7 +1747,9 @@
       "author": "Jack Canfield",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-29"
+      "postedAt": "2026-03-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-19"
     },
     {
       "id": 193,
@@ -1756,7 +1758,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-29"
+      "postedAt": "2026-03-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-19"
     },
     {
       "id": 194,
@@ -1765,7 +1769,9 @@
       "author": "Tim Ferriss",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-29"
+      "postedAt": "2026-03-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-19"
     },
     {
       "id": 195,
