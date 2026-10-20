@@ -1720,7 +1720,9 @@
       "author": "Gary Player",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-28"
+      "postedAt": "2026-03-28",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-20"
     },
     {
       "id": 190,
@@ -1729,7 +1731,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-28"
+      "postedAt": "2026-03-28",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-20"
     },
     {
       "id": 191,
@@ -1738,7 +1742,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-29"
+      "postedAt": "2026-03-29",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-20"
     },
     {
       "id": 192,
