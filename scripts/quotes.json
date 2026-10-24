@@ -1612,7 +1612,9 @@
       "author": "Marie Forleo",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-26"
+      "postedAt": "2026-03-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-24"
     },
     {
       "id": 178,
@@ -1621,7 +1623,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-26"
+      "postedAt": "2026-03-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-24"
     },
     {
       "id": 179,
@@ -1630,7 +1634,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-26"
+      "postedAt": "2026-03-26",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-24"
     },
     {
       "id": 180,
