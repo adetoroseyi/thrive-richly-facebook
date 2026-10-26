@@ -1558,7 +1558,9 @@
       "author": "Frank Ocean",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-25"
+      "postedAt": "2026-03-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-26"
     },
     {
       "id": 172,
@@ -1567,7 +1569,9 @@
       "author": "Muhammad Ali",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-25"
+      "postedAt": "2026-03-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-26"
     },
     {
       "id": 173,
@@ -1576,7 +1580,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-25"
+      "postedAt": "2026-03-25",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-26"
     },
     {
       "id": 174,
