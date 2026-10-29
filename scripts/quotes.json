@@ -1477,7 +1477,9 @@
       "author": "Robert Collier",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-23"
+      "postedAt": "2026-03-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-29"
     },
     {
       "id": 163,
@@ -1486,7 +1488,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-23"
+      "postedAt": "2026-03-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-29"
     },
     {
       "id": 164,
@@ -1495,7 +1499,9 @@
       "author": "Beverly Sills",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-23"
+      "postedAt": "2026-03-23",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-29"
     },
     {
       "id": 165,
