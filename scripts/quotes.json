@@ -1423,7 +1423,9 @@
       "author": "J.J. Watt",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-22"
+      "postedAt": "2026-03-22",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-31"
     },
     {
       "id": 157,
@@ -1432,7 +1434,9 @@
       "author": "Steve Jobs",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-22"
+      "postedAt": "2026-03-22",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-31"
     },
     {
       "id": 158,
@@ -1441,7 +1445,9 @@
       "author": "John C. Maxwell",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-22"
+      "postedAt": "2026-03-22",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-10-31"
     },
     {
       "id": 159,
