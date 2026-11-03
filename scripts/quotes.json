@@ -1342,7 +1342,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-20"
+      "postedAt": "2026-03-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-03"
     },
     {
       "id": 148,
@@ -1351,7 +1353,9 @@
       "author": "Robert Kiyosaki",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-20"
+      "postedAt": "2026-03-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-03"
     },
     {
       "id": 149,
@@ -1360,7 +1364,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-20"
+      "postedAt": "2026-03-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-03"
     },
     {
       "id": 150,
