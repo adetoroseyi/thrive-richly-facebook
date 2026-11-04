@@ -1315,7 +1315,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-19"
+      "postedAt": "2026-03-19",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-04"
     },
     {
       "id": 145,
@@ -1324,7 +1326,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-19"
+      "postedAt": "2026-03-19",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-04"
     },
     {
       "id": 146,
@@ -1333,7 +1337,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-20"
+      "postedAt": "2026-03-20",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-04"
     },
     {
       "id": 147,
