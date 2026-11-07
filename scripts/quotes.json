@@ -1261,7 +1261,9 @@
       "author": "Henry Ford",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-18"
+      "postedAt": "2026-03-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-07"
     },
     {
       "id": 139,
@@ -1270,7 +1272,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-18"
+      "postedAt": "2026-03-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-07"
     },
     {
       "id": 140,
@@ -1279,7 +1283,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-18"
+      "postedAt": "2026-03-18",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-07"
     },
     {
       "id": 141,
