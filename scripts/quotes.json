@@ -1207,7 +1207,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-17"
+      "postedAt": "2026-03-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-09"
     },
     {
       "id": 133,
@@ -1216,7 +1218,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-17"
+      "postedAt": "2026-03-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-09"
     },
     {
       "id": 134,
@@ -1225,7 +1229,9 @@
       "author": "Dave Ramsey",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-17"
+      "postedAt": "2026-03-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-09"
     },
     {
       "id": 135,
