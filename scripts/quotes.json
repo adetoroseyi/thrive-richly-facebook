@@ -1180,7 +1180,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-16"
+      "postedAt": "2026-03-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-10"
     },
     {
       "id": 130,
@@ -1189,7 +1191,9 @@
       "author": "Eleanor Roosevelt",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-16"
+      "postedAt": "2026-03-16",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-10"
     },
     {
       "id": 131,
@@ -1198,7 +1202,9 @@
       "author": "Margaret Bonnano",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-17"
+      "postedAt": "2026-03-17",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-10"
     },
     {
       "id": 132,
