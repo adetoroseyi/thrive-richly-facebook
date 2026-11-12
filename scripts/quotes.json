@@ -1126,7 +1126,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-15"
+      "postedAt": "2026-03-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-12"
     },
     {
       "id": 124,
@@ -1135,7 +1137,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-15"
+      "postedAt": "2026-03-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-12"
     },
     {
       "id": 125,
@@ -1144,7 +1148,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-15"
+      "postedAt": "2026-03-15",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-12"
     },
     {
       "id": 126,
