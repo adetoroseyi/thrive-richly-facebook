@@ -1045,7 +1045,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-13"
+      "postedAt": "2026-03-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-15"
     },
     {
       "id": 115,
@@ -1054,7 +1056,9 @@
       "author": "Warren Buffett",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-13"
+      "postedAt": "2026-03-13",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-15"
     },
     {
       "id": 116,
@@ -1063,7 +1067,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-14"
+      "postedAt": "2026-03-14",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-15"
     },
     {
       "id": 117,
