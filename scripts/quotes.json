@@ -964,7 +964,9 @@
       "author": "Will Rogers",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-11"
+      "postedAt": "2026-03-11",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-18"
     },
     {
       "id": 106,
@@ -973,7 +975,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-12"
+      "postedAt": "2026-03-12",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-18"
     },
     {
       "id": 107,
@@ -982,7 +986,9 @@
       "author": "",
       "status": "posted",
       "theme": "crimson",
-      "postedAt": "2026-03-12"
+      "postedAt": "2026-03-12",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-18"
     },
     {
       "id": 108,
