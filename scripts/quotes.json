@@ -937,7 +937,9 @@
       "author": "Robert Kiyosaki",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-11"
+      "postedAt": "2026-03-11",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-19"
     },
     {
       "id": 103,
@@ -946,7 +948,9 @@
       "author": "Naval Ravikant",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-11"
+      "postedAt": "2026-03-11",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-19"
     },
     {
       "id": 104,
@@ -955,7 +959,9 @@
       "author": "Dave Ramsey",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-11"
+      "postedAt": "2026-03-11",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-19"
     },
     {
       "id": 105,
