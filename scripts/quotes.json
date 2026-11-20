@@ -910,7 +910,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-10"
+      "postedAt": "2026-03-10",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-20"
     },
     {
       "id": 100,
@@ -919,7 +921,9 @@
       "author": "",
       "status": "posted",
       "theme": "violet",
-      "postedAt": "2026-03-10"
+      "postedAt": "2026-03-10",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-20"
     },
     {
       "id": 101,
@@ -928,7 +932,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-11"
+      "postedAt": "2026-03-11",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-20"
     },
     {
       "id": 102,
