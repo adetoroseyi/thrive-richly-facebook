@@ -856,7 +856,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-09"
+      "postedAt": "2026-03-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-22"
     },
     {
       "id": 94,
@@ -865,7 +867,9 @@
       "author": "Jim Rohn",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-09"
+      "postedAt": "2026-03-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-22"
     },
     {
       "id": 95,
@@ -874,7 +878,9 @@
       "author": "",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-09"
+      "postedAt": "2026-03-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-22"
     },
     {
       "id": 96,
