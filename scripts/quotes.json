@@ -829,7 +829,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-08"
+      "postedAt": "2026-03-08",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-23"
     },
     {
       "id": 91,
@@ -838,7 +840,9 @@
       "author": "Wayne Dyer",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-09"
+      "postedAt": "2026-03-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-23"
     },
     {
       "id": 92,
@@ -847,7 +851,9 @@
       "author": "Tony Robbins",
       "status": "posted",
       "theme": "emerald",
-      "postedAt": "2026-03-09"
+      "postedAt": "2026-03-09",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-23"
     },
     {
       "id": 93,
