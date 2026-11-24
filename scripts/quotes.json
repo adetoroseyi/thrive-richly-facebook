@@ -802,7 +802,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-08"
+      "postedAt": "2026-03-08",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-24"
     },
     {
       "id": 88,
@@ -820,7 +822,9 @@
       "author": "",
       "status": "posted",
       "theme": "electric_blue",
-      "postedAt": "2026-03-08"
+      "postedAt": "2026-03-08",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-24"
     },
     {
       "id": 90,
