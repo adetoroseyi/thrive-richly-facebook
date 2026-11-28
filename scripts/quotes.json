@@ -703,7 +703,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-06"
+      "postedAt": "2026-03-06",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-28"
     },
     {
       "id": 77,
@@ -712,7 +714,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-06"
+      "postedAt": "2026-03-06",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-28"
     },
     {
       "id": 78,
@@ -721,7 +725,9 @@
       "author": "",
       "status": "posted",
       "theme": "gold",
-      "postedAt": "2026-03-06"
+      "postedAt": "2026-03-06",
+      "reelStatus": "posted",
+      "reelPostedAt": "2026-11-28"
     },
     {
       "id": 79,
